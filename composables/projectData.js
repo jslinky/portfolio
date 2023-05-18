@@ -7,7 +7,7 @@ export default {
             description: `<h3>Overview</h3>
 
             <p>One of Holograph's key offerings has been creating end-to-end consumer competition campaigns. A QR code takes the consumer to a form which collates data for the competition including name, age range, location, purchase location etc. Redeemable codes can be sent out as instant prize wins or winners can be selected using a fulfilment interface. Associated branded dashboards give valuable insight into key metric campaign data.</p>
-            <details>
+            <details open>
             <summary>
             Role
             </summary>
@@ -36,7 +36,7 @@ export default {
             description: `<h3>Overview</h3>
 
             <p>An important recent project at Holograph is our comprehensive dashboard designed to support our online competition offerings. This dynamic dashboard provides real-time data on key metrics, such as the number of QR code scans, unique website visitors, competition entries, new subscriptions, claimed and expired prizes, as well as wins distributed throughout the day. Additionally, the dashboard presents an easy-to-understand visual timeline of the competition campaign. The dashboard, adorned with associated branding, is a powerful tool for gaining valuable insights into campaign performance and customer behaviour.</p>
-            <details>
+            <details open>
             <summary>
             Role
             </summary>
@@ -55,7 +55,7 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>Holograph developed an instant win and draw competition for Lucozade (Energy) and their XBox partnership, in association with Bethesda Softworks. This cross promotional tie-in focused on the highly anticipated upcoming game, Starfield.  Through the means of approximately 13,000 POS across UK & Ireland channels. Approximately 98 million on-pack bottles will contain a QR code linking to the competition, where the consumer is encouraged to ‘Scan to Win’.</p>            
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
@@ -75,7 +75,7 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>We were tasked with designing and building a revamped website for Ribena - home of the original much loved blackcurrant soft drink. This would include home, about and sustainability pages swell as a rebuild e-commerce shop.</p>
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
@@ -94,7 +94,7 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>Lucozade tasked us to develop a new website which would bring each of their core brands (Energy, Sport, Zero and Alert) under one site. This would include home, product landing pages, contact and a e-commerce shop.</p>            
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
@@ -113,7 +113,7 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>Tasked with reimagining Holograph Digital Experience Platform (DXP), comprising a suite of tools such as  Page Editor, Content Manager, and Form Builder. The brief was to think of this as a DAM, in which types of content were manageable assets.</p>          
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
@@ -139,7 +139,7 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>This project involved the Holograph team and the client, Suntory Beverage & Food Europe (SBFE), collaborating to develop a new Quality Environment Health & Safety (QEHS) reporting system and Environment Health & Safety (EHS) incident management system. Aimed at quickly sharing and managing any incidents that occur, replacing the old Lotus notes systems and reducing reliance on excel spreadsheets for managing corrective actions.</p>
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
@@ -158,7 +158,7 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>Holo.promo is intended as a new brand for Holograph with our instant win competition mechanic as the product. The intention being that it will serve as a SAAS product.</p>
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
@@ -192,7 +192,7 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>Website development and on-going campaign and content for Jack Wills.</p>
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
@@ -250,7 +250,7 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>AAM are the global leader in digital cinema software and services, offering a wide range of solutions to exhibitors which enable them to reduce costs, increase efficiency, and improve the cinematic experience for their customers. Their software reaches over 42,000 digital screens worldwide, while our network operations centre (NOC) supports several thousand screens.</p>
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
@@ -269,7 +269,7 @@ export default {
             description: `
             <h3>Overview</h3>            
             <p>My role within The Hot Group, of which PlanetRecruit was one of their brands. A matchmaking service for recruiters and job seekers. Recruiters advertised their vacancies on the site and job seekers upload their CVs and review the jobs on offer. A subscription service aimed exclusively at agencies. It was an aggregator of recruitment agency vacancies and and covered a broad selection of job sectors, offering both UK and international jobs.</p>
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
@@ -297,7 +297,7 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>The project involved the creation of white label dating websites, each uniquely themed to match the distinct branding requirements of various high-profile clients, including Telegraph and SAGA.</p>
-            <details>
+            <details open>
             <summary>
             My Role
             </summary>
