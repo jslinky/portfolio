@@ -8,9 +8,9 @@
             <!-- <div > -->
                 <TransitionGroup name="list" tag="div" v-for="(chunk, i) in chunkedArray" :key="i" class="main-portfolio__projects">
                 <div v-for="(item, itemIndex) in chunk" :key="item" :style="{'--itemIndex': itemIndex }" class="main-portfolio__project-item">
-                    <nuxt-link :to="`/portfolio/${item.slug}`">
+                    <nuxt-link :to="`/portfolio/${item.slug}`" :title="item.title">
                         <span><strong>{{ item.title }}</strong></span>
-                        <img :src="item.image" />
+                        <img :src="item.image[0]" loading="lazy" :alt="item.title" />
                     </nuxt-link>                    
                 </div>
                 </TransitionGroup>
