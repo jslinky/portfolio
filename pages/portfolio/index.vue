@@ -1,7 +1,6 @@
 <template>
     <div class="main-portfolio__index">
         <h1><span>My</span> portfolio</h1>
-        <img src="~/assets/arts-alliance-media.jpg" alt="Discover Nuxt 3" style="position:fixed" />
         <!-- <section>
             <nuxt-link v-for="(project, i) in projects.portfolio" :key="`project-${i}`" :to="`/portfolio/${project.slug}`">{{ project.title }}</nuxt-link>
         </section> -->
