@@ -26,7 +26,7 @@ export default {
             </div>
             </details>
             `,
-            image: ["~/assets/competition-form.png", "~/assets/comp-template-option-1.png", "~/assets/comp-template-option-2.png"],
+            image: ["./competition-form.png", "/_nuxt/assets/comp-template-option-1.png", "/_nuxt/assets/comp-template-option-2.png"],
             // url: "http://project1.example.com",
             tags: ['design', 'html', 'css', 'typescript', 'vue', 'pinia', 'UI']
         },
@@ -45,7 +45,7 @@ export default {
             </div>
             </details>
             `,
-            image: ["~/assets/starfield-dashboard.jpg", "~/assets/holo-dashboard.jpg"],
+            image: ["/_nuxt/assets/starfield-dashboard.jpg", "/_nuxt/assets/holo-dashboard.jpg"],
             // url: "http://project1.example.com",
             tags: ['design', 'html', 'css', 'UI']
         },        
@@ -65,7 +65,7 @@ export default {
             </div>
             </details>
             `,
-            image: ["~/assets/starfield-entry.jpg"],
+            image: ["/_nuxt/assets/starfield-entry.jpg"],
             url: ["https://www.lucozade.com/"],
             tags: ['design', 'css', 'typescript', 'vue', 'UI', 'animation']        
         },
@@ -84,7 +84,7 @@ export default {
             </div>
             </details>
             `,
-            image: ["~/assets/ribena-home.png"],
+            image: ["/_nuxt/assets/ribena-home.png"],
             url: ["https://www.ribena.co.uk/"],
             tags: ['html', 'css', 'typescript', 'UI', 'animation']        
         },
@@ -103,7 +103,7 @@ export default {
             </div>
             </details>            
             `,
-            image: ["~/assets/lucozade-home.png"],
+            image: ["/_nuxt/assets/lucozade-home.png"],
             url: ["https://www.lucozade.com/"],
             tags: ['html', 'css', 'typescript', 'UI', 'animation']
         },
@@ -122,7 +122,7 @@ export default {
             </div>
             </details>                          
             `,
-            image: ["~/assets/holo-design-lanaguage-1.jpg", "~/assets/holo-design-lanaguage-2.jpg", "~/assets/holo-design-lanaguage-3.jpg"],
+            image: ["/_nuxt/assets/holo-design-lanaguage-1.jpg", "/_nuxt/assets/holo-design-lanaguage-2.jpg", "/_nuxt/assets/holo-design-lanaguage-3.jpg"],
             tags: ['design', 'UI', 'UX']
         },  
         {
@@ -130,7 +130,7 @@ export default {
             slug: "one-suntory",
             // description: `                         
             // `,
-            image: ["~/assets/one-suntory-news.jpg", "~/assets/one-suntory-news-page.jpg"],
+            image: ["/_nuxt/assets/one-suntory-news.jpg", "/_nuxt/assets/one-suntory-news-page.jpg"],
             tags: ['css']
         },                
         {
@@ -148,7 +148,7 @@ export default {
             </div>
             </details>             
             `,
-            image: ["~/assets/ehs-incident.png"],
+            image: ["/_nuxt/assets/ehs-incident.png"],
             // url: [],
             tags: ['html', 'css', 'UI', 'design']
         },
@@ -167,7 +167,7 @@ export default {
             </div>
             </details>                         
             `,
-            image: ["~/assets/holo-promo.jpg"],
+            image: ["/_nuxt/assets/holo-promo.jpg"],
             url: ["https://holo.promo/articles/published"],
             tags: ['html', 'css', 'UI']
         },
@@ -175,7 +175,7 @@ export default {
             title: "Listerine competition",
             slug: "listerine-competition",
             // description: "This is project 2.",
-            image: ["~/assets/listerine.jpg"],
+            image: ["/_nuxt/assets/listerine.jpg"],
             // url: ["http://project2.example.com"],
             tags: ['html', 'css', 'UI']
         },
@@ -183,7 +183,7 @@ export default {
             title: "Content Manager",
             slug: "content-manager",
             // description: "This is project 2.",
-            image: ["~/assets/content-manager-template.png", "~/assets/content-manager-listing.png"],
+            image: ["/_nuxt/assets/content-manager-template.png", "/_nuxt/assets/content-manager-listing.png"],
             tags: ['html', 'css', 'UI', 'design']
         },
         {
@@ -204,7 +204,7 @@ export default {
             </div>
             </details>                         
             `,
-            image: ["~/assets/jack-wills-1.jpg"],
+            image: ["/_nuxt/assets/jack-wills-1.jpg"],
             tags: ['html', 'css', 'UI', 'javascript']      
         },  
         {
@@ -214,7 +214,7 @@ export default {
             <h3>Overview</h3>
             <p>Website design for personal trainer company</p>
             `,
-            image: ["~/assets/fortitude-fitness.jpg"],
+            image: ["/_nuxt/assets/fortitude-fitness.jpg"],
             tags: ['design', 'logo', 'html', 'css', 'javascript', 'animation'] 
         },  
         {
@@ -224,7 +224,7 @@ export default {
             <h3>Overview</h3>
             <p>Logo design for small local building company</p>
             `,
-            image: ["~/assets/smallworks.png"],
+            image: ["/_nuxt/assets/smallworks.png"],
             tags: ['design', 'logo'] 
         }, 
         {
@@ -234,14 +234,14 @@ export default {
             <h3>Overview</h3>
             <p>Various personal mix covers and music related artwork</p>
             `,
-            image: ["~/assets/music-artwork.jpg"],
+            image: ["/_nuxt/assets/music-artwork.jpg"],
             tags: ['design'] 
         },                     
         {
             title: "RAD Space",
             slug: "rad-space",
             // description: "This is project 2.",
-            image: ["~/assets/radspace.jpg"],
+            image: ["/_nuxt/assets/radspace.jpg"],
             tags: ['design']      
         },
         {
@@ -259,7 +259,7 @@ export default {
             </div>
             </details>               
             `,
-            image: ["~/assets/arts-alliance-media.jpg", '~/assets/vizumi.jpg'],
+            image: ["/_nuxt/assets/arts-alliance-media.jpg", '/_nuxt/assets/vizumi.jpg'],
             tags: ['design', 'html', 'css'],
             url: ['https://www.artsalliancemedia.com/']
         },  
@@ -278,7 +278,7 @@ export default {
             </div>
             </details>              
             `,
-            image: ["~/assets/planet-recruit.jpg"],
+            image: ["/_nuxt/assets/planet-recruit.jpg"],
             tags: ['design', 'html', 'css']
         },             
         {
@@ -288,7 +288,7 @@ export default {
             <h3>Overview</h3>
             <p>Website design for estate agent</p>
             `,
-            image: ["~/assets/wyatt-hughes.jpg"],
+            image: ["/_nuxt/assets/wyatt-hughes.jpg"],
             tags: ['design'] 
         }, 
         {
@@ -307,28 +307,28 @@ export default {
             </details>              
 
             `,
-            image: ["~/assets/dating.jpg"],
+            image: ["/_nuxt/assets/dating.jpg"],
             tags: ['design', 'html', 'css']      
         },                            
         {
             title: "Sky Mobile",
             slug: "sky-mobile",
             // description: "This is project 2.",
-            image: ["~/assets/sky-mobile.jpg"],
+            image: ["/_nuxt/assets/sky-mobile.jpg"],
             tags: ['design', 'html', 'css']   
         },  
         {
             title: "Smirnoff Engagement Tool",
             slug: "smirnoff-engagement-tool",
             // description: "This is project 2.",
-            image: ["~/assets/smirnoff.jpg"],
+            image: ["/_nuxt/assets/smirnoff.jpg"],
             tags: ['design', 'html', 'css']     
         }, 
         {
             title: "Reed Creative",
             slug: "reed-creative",
             // description: "This is project 2.",
-            image: ["~/assets/reed-creative.jpg"],
+            image: ["/_nuxt/assets/reed-creative.jpg"],
             tags: ['design', 'html', 'css']      
         },                                                     
       ]
