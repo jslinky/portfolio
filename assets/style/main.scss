@@ -19,6 +19,15 @@ $container-max-bp: $visual-min-width + $content-min-width + $wrapper-padding;
     padding-inline: var(--wrapper-inline);
 }
 
+@each $prop, $val in get('sizing') {
+    @if map-has-key($val , "text") {
+        $text: map-get($val , "text");
+        .text-#{$prop} {
+            font-size: #{$text};
+        } 
+    }
+}
+
 :root {
     --primaryH: 26;
     
@@ -51,7 +60,10 @@ html {
 
 body {
     -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;    
+    -webkit-font-smoothing: antialiased;   
+    @supports not (container-type: inline-size) {
+        display:none;   
+    }
 }
 
 :is(*, *:before, *:after) {
@@ -871,3 +883,18 @@ summary {
 
 /// Page transitions
 /// 
+.not-supported {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    justify-content: center;
+    text-align: center;
+    > * {
+        margin:0;
+        line-height: 1.2;
+        + * {
+            margin-top: var(--space-l);
+        }
+    }    
+}
