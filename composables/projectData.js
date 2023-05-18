@@ -26,7 +26,7 @@ export default {
             </div>
             </details>
             `,
-            image: ["./competition-form.png", "~/assets/comp-template-option-1.png", "/_nuxt/assets/comp-template-option-2.png"],
+            image: ["/img/competition-form.png", "/_nuxt/comp-template-option-1.png", "/_nuxt/assets/comp-template-option-2.png"],
             // url: "http://project1.example.com",
             tags: ['design', 'html', 'css', 'typescript', 'vue', 'pinia', 'UI']
         },
