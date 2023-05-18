@@ -26,7 +26,7 @@ export default {
             </div>
             </details>
             `,
-            image: ["/img/competition-form.png", "/img/comp-template-option-1.png", "/img/assets/comp-template-option-2.png"],
+            image: ["/img/competition-form.png", "/img/comp-template-option-1.png", "/img/comp-template-option-2.png"],
             // url: "http://project1.example.com",
             tags: ['design', 'html', 'css', 'typescript', 'vue', 'pinia', 'UI']
         },
@@ -45,7 +45,7 @@ export default {
             </div>
             </details>
             `,
-            image: ["/img/assets/starfield-dashboard.jpg", "/img/assets/holo-dashboard.jpg"],
+            image: ["/img/starfield-dashboard.jpg", "/img/holo-dashboard.jpg"],
             // url: "http://project1.example.com",
             tags: ['design', 'html', 'css', 'UI']
         },        
@@ -65,7 +65,7 @@ export default {
             </div>
             </details>
             `,
-            image: ["/img/assets/starfield-entry.jpg"],
+            image: ["/img/starfield-entry.jpg"],
             url: ["https://www.lucozade.com/"],
             tags: ['design', 'css', 'typescript', 'vue', 'UI', 'animation']        
         },
@@ -84,7 +84,7 @@ export default {
             </div>
             </details>
             `,
-            image: ["/img/assets/ribena-home.png"],
+            image: ["/img/ribena-home.png"],
             url: ["https://www.ribena.co.uk/"],
             tags: ['html', 'css', 'typescript', 'UI', 'animation']        
         },
@@ -103,7 +103,7 @@ export default {
             </div>
             </details>            
             `,
-            image: ["/img/assets/lucozade-home.png"],
+            image: ["/img/lucozade-home.png"],
             url: ["https://www.lucozade.com/"],
             tags: ['html', 'css', 'typescript', 'UI', 'animation']
         },
@@ -122,7 +122,7 @@ export default {
             </div>
             </details>                          
             `,
-            image: ["/img/assets/holo-design-lanaguage-1.jpg", "/img/assets/holo-design-lanaguage-2.jpg", "/img/assets/holo-design-lanaguage-3.jpg"],
+            image: ["/img/holo-design-lanaguage-1.jpg", "/img/holo-design-lanaguage-2.jpg", "/img/holo-design-lanaguage-3.jpg"],
             tags: ['design', 'UI', 'UX']
         },  
         {
@@ -130,7 +130,7 @@ export default {
             slug: "one-suntory",
             // description: `                         
             // `,
-            image: ["/img/assets/one-suntory-news.jpg", "/img/assets/one-suntory-news-page.jpg"],
+            image: ["/img/one-suntory-news.jpg", "/img/one-suntory-news-page.jpg"],
             tags: ['css']
         },                
         {
@@ -148,7 +148,7 @@ export default {
             </div>
             </details>             
             `,
-            image: ["/img/assets/ehs-incident.png"],
+            image: ["/img/ehs-incident.png"],
             // url: [],
             tags: ['html', 'css', 'UI', 'design']
         },
@@ -167,7 +167,7 @@ export default {
             </div>
             </details>                         
             `,
-            image: ["/img/assets/holo-promo.jpg"],
+            image: ["/img/holo-promo.jpg"],
             url: ["https://holo.promo/articles/published"],
             tags: ['html', 'css', 'UI']
         },
@@ -175,7 +175,7 @@ export default {
             title: "Listerine competition",
             slug: "listerine-competition",
             // description: "This is project 2.",
-            image: ["/img/assets/listerine.jpg"],
+            image: ["/img/listerine.jpg"],
             // url: ["http://project2.example.com"],
             tags: ['html', 'css', 'UI']
         },
@@ -183,7 +183,7 @@ export default {
             title: "Content Manager",
             slug: "content-manager",
             // description: "This is project 2.",
-            image: ["/img/assets/content-manager-template.png", "/img/assets/content-manager-listing.png"],
+            image: ["/img/content-manager-template.png", "/img/content-manager-listing.png"],
             tags: ['html', 'css', 'UI', 'design']
         },
         {
@@ -204,7 +204,7 @@ export default {
             </div>
             </details>                         
             `,
-            image: ["/img/assets/jack-wills-1.jpg"],
+            image: ["/img/jack-wills-1.jpg"],
             tags: ['html', 'css', 'UI', 'javascript']      
         },  
         {
@@ -214,7 +214,7 @@ export default {
             <h3>Overview</h3>
             <p>Website design for personal trainer company</p>
             `,
-            image: ["/img/assets/fortitude-fitness.jpg"],
+            image: ["/img/fortitude-fitness.jpg"],
             tags: ['design', 'logo', 'html', 'css', 'javascript', 'animation'] 
         },  
         {
@@ -224,7 +224,7 @@ export default {
             <h3>Overview</h3>
             <p>Logo design for small local building company</p>
             `,
-            image: ["/img/assets/smallworks.png"],
+            image: ["/img/smallworks.png"],
             tags: ['design', 'logo'] 
         }, 
         {
@@ -234,14 +234,14 @@ export default {
             <h3>Overview</h3>
             <p>Various personal mix covers and music related artwork</p>
             `,
-            image: ["/img/assets/music-artwork.jpg"],
+            image: ["/img/music-artwork.jpg"],
             tags: ['design'] 
         },                     
         {
             title: "RAD Space",
             slug: "rad-space",
             // description: "This is project 2.",
-            image: ["/img/assets/radspace.jpg"],
+            image: ["/img/radspace.jpg"],
             tags: ['design']      
         },
         {
@@ -259,7 +259,7 @@ export default {
             </div>
             </details>               
             `,
-            image: ["/img/assets/arts-alliance-media.jpg", '/img/assets/vizumi.jpg'],
+            image: ["/img/arts-alliance-media.jpg", '/img/vizumi.jpg'],
             tags: ['design', 'html', 'css'],
             url: ['https://www.artsalliancemedia.com/']
         },  
@@ -278,7 +278,7 @@ export default {
             </div>
             </details>              
             `,
-            image: ["/img/assets/planet-recruit.jpg"],
+            image: ["/img/planet-recruit.jpg"],
             tags: ['design', 'html', 'css']
         },             
         {
@@ -288,7 +288,7 @@ export default {
             <h3>Overview</h3>
             <p>Website design for estate agent</p>
             `,
-            image: ["/img/assets/wyatt-hughes.jpg"],
+            image: ["/img/wyatt-hughes.jpg"],
             tags: ['design'] 
         }, 
         {
@@ -307,28 +307,28 @@ export default {
             </details>              
 
             `,
-            image: ["/img/assets/dating.jpg"],
+            image: ["/img/dating.jpg"],
             tags: ['design', 'html', 'css']      
         },                            
         {
             title: "Sky Mobile",
             slug: "sky-mobile",
             // description: "This is project 2.",
-            image: ["/img/assets/sky-mobile.jpg"],
+            image: ["/img/sky-mobile.jpg"],
             tags: ['design', 'html', 'css']   
         },  
         {
             title: "Smirnoff Engagement Tool",
             slug: "smirnoff-engagement-tool",
             // description: "This is project 2.",
-            image: ["/img/assets/smirnoff.jpg"],
+            image: ["/img/smirnoff.jpg"],
             tags: ['design', 'html', 'css']     
         }, 
         {
             title: "Reed Creative",
             slug: "reed-creative",
             // description: "This is project 2.",
-            image: ["/img/assets/reed-creative.jpg"],
+            image: ["/img/reed-creative.jpg"],
             tags: ['design', 'html', 'css']      
         },                                                     
       ]
