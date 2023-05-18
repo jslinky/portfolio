@@ -1,0 +1,13 @@
+$dfr-config: deep-map-merge(
+  (
+    'border': (
+        "radius": var(--text-xs),
+        "fieldBorderWidth": 2px,
+        'fieldBorderColor': var(--c-grey3),
+        "panelBorderColor": var(--c-lightShade),
+    )
+  ),
+  $dfr-config,
+  true
+);
+

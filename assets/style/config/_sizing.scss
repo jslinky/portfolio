@@ -1,0 +1,48 @@
+$dfr-config: deep-map-merge(
+  (
+    'sizing': (
+        "xs": (
+            "text": calc((var(--xs-px) / #{$ROOT_FONT_SIZE}) * 1rem)
+          ) ,
+          "s": (
+            "text": calc((var(--s-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+            "space": var(--unit),
+          ),
+          "m": (
+            "text": calc((var(--m-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+            "space": calc(var(--space-s) * var(--spaceIncrement)),
+          ),
+          "l": (
+            "text": calc((var(--l-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+            "space": calc(var(--space-m) * var(--spaceIncrement)),
+          ),
+          "xl": (
+            "text": calc((var(--xl-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+            "space": calc(var(--space-l) * var(--spaceIncrement)),
+          ) ,
+          "2xl": (
+            "text": calc((var(--2xl-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+            "space": calc(var(--space-xl) * var(--spaceIncrement)),
+          ),
+          "3xl": (
+            "text": calc((var(--3xl-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+            "space": calc(var(--space-2xl) * var(--spaceIncrement)),
+          ),
+          "4xl": (
+            "text": calc((var(--4xl-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+            "space": calc(var(--space-3xl) * var(--spaceIncrement)),
+          ),
+          "5xl": (
+            "text": calc((var(--5xl-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+            "space": calc(var(--space-4xl) * var(--spaceIncrement)),
+          ),
+          "6xl": (
+            "text": calc((var(--6xl-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+            "space": calc(var(--space-5xl) * var(--spaceIncrement)),
+          ),
+    )
+  ),
+  $dfr-config,
+  true
+);
+

@@ -1,0 +1,146 @@
+/// Colour custom property values
+/// These same custom props are also used within the dashboard
+/// @author Justin Small
+/// @group core
+/// @group config
+/// @example primary color
+/// <div style="color: var(--c-primaryContrasted); background: var(--c-primary)">Color primary</div>
+/// <div style="color: var(--c-grey1); background: var(--c-grey8)">Grey</div>
+
+$dfr-config: deep-map-merge(
+  (
+    'color': (
+        "hue": 26,
+        "hueComplement": calc(var(--hue) + 180),
+        "hueRightAnalogous": calc(var(--hue) + 30),
+        "hueLeftAnalogous": calc(var(--hue) - 30),
+
+        "primaryS": 58%,
+        "primaryL": 43%,
+        /// dash related props - start
+        "primaryLTint": 40%,
+        "primaryLShade": 40%,
+        /// dash related props - end
+        "c-primary": hsl(var(--hue) var(--primaryS) var(--primaryL)),
+        /// dash related props - start
+        "c-primaryTint": hsl(var(--hue) var(--primaryS) var(--primaryLTint)),
+        "c-primaryShade": hsl(var(--hue) var(--primaryS) var(--primaryLShade)),
+        /// dash related props - end
+        "c-primaryContrasted": hsl(var(--hue) var(--primaryS) 90%),
+
+        // "secondaryH": var(--hueComplement),
+        "secondaryH": 191,
+        "secondaryS": 100%,
+        "secondaryL": 40%,
+        /// dash related props - start
+        "secondaryLTint": 40%,
+        "secondaryLShade": 40%,
+        /// dash related props - end
+        "c-secondary": hsl(var(--secondaryH) var(--secondaryS) var(--secondaryL)),
+        /// dash related props - start
+        "c-secondaryTint": hsl(var(--secondaryH) var(--secondaryS) var(--secondaryLTint)),
+        "c-secondaryShade": hsl(var(--secondaryH) var(--secondaryS) var(--secondaryLShade)),
+        /// dash related props - end
+        "c-secondaryContrasted": hsl(var(--hueComplement) var(--secondaryS) 65%),
+
+        // "accentH": var(--hueRightAnalogous),
+        "accentH": 255,
+        "accentS": 40%,
+        "accentL": 40%,
+        /// dash related props - start
+        "accentLTint": 40%,
+        "accentLShade": 40%,
+        /// dash related props - end
+        "c-accent": hsl(var(--accentH), var(--accentS), var(--accentL)),
+        /// dash related props - start
+        "c-accentTint": hsl(var(--accentH), var(--accentS), var(--accentLTint)),
+        "c-accentShade": hsl(var(--accentH), var(--accentS), var(--accentLShade)),
+        /// dash related props - end
+        "c-accentContrasted": hsl(var(--accentH), var(--accentS), 95%),
+
+        "accentAltH": var(--hueLeftAnalogous),
+        "accentAltS": 40%,
+        "accentAltL": 40%,
+        /// dash related props - start
+        "accentAltLTint": 40%,
+        "accentAltLShade": 40%,
+        /// dash related props - end
+        "c-accentAlt": hsl(var(--accentAltH), var(--accentAltS), var(--accentAltL)),
+        /// dash related props - start
+        "c-accentAltTint": hsl(var(--accentAltH), var(--accentAltS), var(--accentAltLTint)),
+        "c-accentAltShade": hsl(var(--accentAltH), var(--accentAltS), var(--accentAltLShade)),
+        /// dash related props - end
+        "c-accentAltContrasted": hsl(var(--accentAltH), var(--accentAltS), 95%),
+
+        /// dash related props - start
+        "lightH": var(--greyH),
+        "lightS": var(--greyS),
+        "lightL": var(--grey1L),
+        "lightLTint": 98%,
+        "lightLShade": var(--grey2L),
+        "c-light": hsl(var(--lightH) var(--lightS) var(--lightL)),
+        "c-lightTint": hsl(var(--lightH), var(--lightS), var(--lightLTint)),
+        "c-lightShade": hsl(var(--lightH), var(--lightS), var(--lightLShade)),
+        "c-lightContrasted": var(--dark),
+
+        "darkH": var(--greyH),
+        "darkS": var(--greyS),
+        "darkL": var(--grey8L),
+        "darkLTint":  var(--grey7L),
+        "darkLShade": 98%,
+        "c-dark": hsl(var(--darkH) var(--darkS) var(--darkL)),
+        "c-darkTint": hsl(var(--darkH), var(--darkS), var(--darkLTint)),
+        "c-darkShade": hsl(var(--darkH), var(--darkS), var(--darkLShade)),
+        "c-darkContrasted": var(--light),
+        /// dash related props - end
+
+        "dangerH": 346,
+        "dangerS": 64%,
+        "dangerL": 38%,
+        "c-danger": hsl(var(--dangerH), var(--dangerS), var(--dangerL)),
+
+        "panelBg": var(--c-light),
+
+        "greyH": var(--hue),
+        "greyS": 30%,
+        "initialGreyLightness": 93%,
+        "greyscaleLightnessIncrement": 11.3%,
+
+        "grey1L":  var(--initialGreyLightness),
+        "grey2L":  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1),
+        "grey3L":  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2),
+        "grey4L":  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3),
+        "grey5L":  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4),
+        "grey6L":  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5),
+        "grey7L":  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6),
+        "grey8L":  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7),
+
+        "c-grey1": hsl(var(--greyH), var(--greyS), var(--grey1L)),
+        "c-grey2": hsl(var(--greyH), var(--greyS), var(--grey2L)),
+        "c-grey3": hsl(var(--greyH), var(--greyS), var(--grey3L)),
+        "c-grey4": hsl(var(--greyH), var(--greyS), var(--grey4L)),
+        "c-grey5": hsl(var(--greyH), var(--greyS), var(--grey5L)),
+        "c-grey6": hsl(var(--greyH), var(--greyS), var(--grey6L)),
+        "c-grey7": hsl(var(--greyH), var(--greyS), var(--grey7L)),
+        "c-grey8": hsl(var(--greyH), var(--greyS), var(--grey8L)),
+
+        "c-border": hsla(var(--greyH), var(--greyS), var(--grey8L), 0.1),
+        "c-overlay": hsla(var(--greyH), var(--greyS), var(--grey8L), 0.07),
+
+        "c-background": hsl(var(--bodyBgH) var(--bodyBgS) var(--bodyBgL)),
+        "bodyBgH": var(--greyH),
+        "bodyBgS": 40%,
+        "bodyBgL": var(--grey1L),
+
+        "c-body": var(--c-grey8),
+        "c-bodyDimmed": hsla(var(--greyH), var(--greyS), var(--grey8L), 0.5),
+        "c-fieldBorder": var(--c-grey2),
+        "c-buttonBg": var(--c-grey2),
+
+        "c-link": var(--c-accent),
+        "c-linkDimmed": var(--c-bodyDimmed),
+    )
+  ),
+  $dfr-config,
+  true
+);

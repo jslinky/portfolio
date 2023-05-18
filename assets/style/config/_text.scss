@@ -1,0 +1,35 @@
+$dfr-config: deep-map-merge(
+  (
+    'text': (
+        "fontFamily": "'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif",
+        "headingFontFamily": "Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif",
+        "textSizeIncrement": 1.180,
+        "spaceIncrement": 1.8,
+        "unit": 0.5rem,
+        "lineHeightFixedAmount": 0.5rem,
+        "lineHeightRelativeAmount": 0.75em,
+        "globalLineHeight": calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount)),
+        "textFrameRatio": 2.75,
+        "textFrameY": 0.85em,
+        "textFrameX": calc(var(--textFrameY) * var(--textFrameRatio)),
+
+        'baseTextSizePx': 16,
+        // 'font-size': calc((var(--base-text-size-px) / #{$ROOT_FONT_SIZE}) * 1rem),
+        'baseTextSize': calc((var(--baseTextSizePx) / #{$ROOT_FONT_SIZE}) * 1rem),
+        'xs-px': if($use-typo-scale, calc(var(--s-px) / var(--textSizeIncrement)), 11),
+        's-px': if($use-typo-scale, calc(var(--baseTextSizePx) / var(--textSizeIncrement)), 13),
+        'm-px': if($use-typo-scale, calc(var(--baseTextSizePx) * var(--textSizeIncrement)), 18),
+        'l-px': if($use-typo-scale, calc(var(--m-px) * var(--textSizeIncrement)), 21),
+        'xl-px': if($use-typo-scale, calc(var(--l-px) * var(--textSizeIncrement)), 24),
+        '2xl-px': if($use-typo-scale, calc(var(--xl-px) * var(--textSizeIncrement)), 30),
+        '3xl-px': if($use-typo-scale, calc(var(--2xl-px) * var(--textSizeIncrement)), 36),
+        '4xl-px': if($use-typo-scale, calc(var(--3xl-px) * var(--textSizeIncrement)), 44),
+        '5xl-px': if($use-typo-scale, calc(var(--4xl-px) * var(--textSizeIncrement)), 60),
+        '6xl-px': if($use-typo-scale, calc(var(--5xl-px) * var(--textSizeIncrement)), 72),
+
+    )
+  ),
+  $dfr-config,
+  true
+);
+

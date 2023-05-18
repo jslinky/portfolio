@@ -1,0 +1,9 @@
+@mixin output-config($map) {
+    @each $prop, $val in $map {
+      @if(type-of($val) == 'map') {
+        @each $config-prop, $config-val in $val {
+          --#{$prop}-#{$config-prop}: #{$config-val};
+        }
+      }
+    }
+  }

@@ -1,0 +1,133 @@
+
+@mixin heading($size, $color, $weight, $line-height, $text-transform: none, $font-family: false) {
+    --headingFontSize: #{$size};
+    --headingColor: #{$color};
+    --headingFontWeight: #{$weight};
+    --headingTextTransform: #{$text-transform};
+    @if $font-family != false {
+      --headingFontFamily: #{$font-family};
+    }
+    --headingLineHeight: #{$line-height};
+}
+
+@mixin main-heading() {
+    $size: get('heading.headline.size');
+    $color: get('heading.headline.color');
+    $weight: get('heading.headline.weight');
+    $line-height: get('heading.headline.line-height');
+    $text-transform: if(map-has-key(get('heading.headline'), 'text-transform'), get('heading.headline.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.headline'), 'font-family'), get('heading.headline.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family);
+}
+
+  @mixin heading-6xl() {
+    $size: get('heading.6xl.size');
+    $color: get('heading.6xl.color');
+    $weight: get('heading.6xl.weight');
+    $line-height: get('heading.6xl.line-height');
+    $text-transform: if(map-has-key(get('heading.6xl'), 'text-transform'), get('heading.6xl.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.6xl'), 'font-family'), get('heading.6xl.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family);
+  }
+
+  @mixin heading-5xl() {
+    $size: get('heading.5xl.size');
+    $color: get('heading.5xl.color');
+    $weight: get('heading.5xl.weight');
+    $line-height: get('heading.5xl.line-height');
+    $text-transform: if(map-has-key(get('heading.5xl'), 'text-transform'), get('heading.5xl.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.5xl'), 'font-family'), get('heading.5xl.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family);
+  }
+
+  @mixin heading-4xl() {
+    $size: get('heading.4xl.size');
+    $color: get('heading.4xl.color');
+    $weight: get('heading.4xl.weight');
+    $line-height: get('heading.4xl.line-height');
+    $text-transform: if(map-has-key(get('heading.4xl'), 'text-transform'), get('heading.4xl.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.4xl'), 'font-family'), get('heading.4xl.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family);
+  }
+
+  @mixin heading-3xl() {
+    $size: get('heading.3xl.size');
+    $color: get('heading.3xl.color');
+    $weight: get('heading.3xl.weight');
+    $line-height: get('heading.3xl.line-height');
+    $text-transform: if(map-has-key(get('heading.3xl'), 'text-transform'), get('heading.3xl.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.3xl'), 'font-family'), get('heading.3xl.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family);
+  }
+
+  @mixin heading-2xl() {
+    $size: get('heading.2xl.size');
+    $color: get('heading.2xl.color');
+    $weight: get('heading.2xl.weight');
+    $line-height: get('heading.2xl.line-height');
+    $text-transform: if(map-has-key(get('heading.2xl'), 'text-transform'), get('heading.2xl.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.2xl'), 'font-family'), get('heading.2xl.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family);
+  }
+
+  @mixin heading-xl() {
+    $size: get('heading.xl.size');
+    $color: get('heading.xl.color');
+    $weight: get('heading.xl.weight');
+    $line-height: get('heading.xl.line-height');
+    $text-transform: if(map-has-key(get('heading.xl'), 'text-transform'), get('heading.xl.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.xl'), 'font-family'), get('heading.xl.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family);
+  }
+
+  @mixin heading-l() {
+    $size: get('heading.l.size');
+    $color: get('heading.l.color');
+    $weight: get('heading.l.weight');
+    $line-height: get('heading.l.line-height');
+    $text-transform: if(map-has-key(get('heading.l'), 'text-transform'), get('heading.l.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.l'), 'font-family'), get('heading.l.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family);
+  }
+
+  @mixin heading-m() {
+    $size: get('heading.m.size');
+    $color: get('heading.m.color');
+    $weight: get('heading.m.weight');
+    $line-height: get('heading.m.line-height');
+    $text-transform: if(map-has-key(get('heading.m'), 'text-transform'), get('heading.m.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.m'), 'font-family'), get('heading.m.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family);
+  }
+
+  @mixin heading-eyebrow() {
+    $size: get('heading.eyebrow.size');
+    $color: get('heading.eyebrow.color');
+    $weight: get('heading.eyebrow.weight');
+    $line-height: get('heading.eyebrow.line-height');
+    $letter-spacing: get('heading.eyebrow.letter-spacing');
+    $text-transform: if(map-has-key(get('heading.eyebrow'), 'text-transform'), get('heading.eyebrow.text-transform') , inherit);
+    $font-family: if(map-has-key(get('heading.eyebrow'), 'font-family'), get('heading.eyebrow.font-family') , false);
+    @include heading($size, $color, $weight, $line-height, $text-transform, $font-family); // extend this to use args
+    letter-spacing: #{$letter-spacing};
+  }
+
+  @mixin headingRules() {
+    $size: get('heading.base.size');
+    $color: get('heading.base.color');
+    $text-transform: get('heading.base.text-transform');
+    $font-family: get('heading.base.font-family');
+    $weight: get('heading.base.weight');
+    $letter-spacing: get('heading.base.letter-spacing');
+    $line-height: get('heading.base.line-height');
+    font-size: var(--headingFontSize, #{$size});
+    color: var(--headingColor, #{$color});
+    text-transform: var(--headingTextTransform, #{$text-transform});
+    font-family: var(--headingFontFamily, #{$font-family});
+    font-weight: var(--headingFontWeight, #{$weight});
+    letter-spacing: var(--headingLetterSpacing, #{$letter-spacing});
+    line-height: var(--headingLineHeight, #{$line-height});
+  }
+
+
+

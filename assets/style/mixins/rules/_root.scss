@@ -1,0 +1,27 @@
+
+
+@mixin rootProps() {
+
+    @each $prop, $val in get('border') {
+        --#{$prop}: #{$val};
+    }
+
+    @each $prop, $val in get('text') {
+        --#{$prop}: #{$val};
+    }
+
+    @each $prop, $val in get('sizing') {
+        @if map-has-key($val , "text") {
+        $text: map-get($val , "text");
+        --text-#{$prop}: #{$text};
+        }
+        @if map-has-key($val , "space") {
+        $space: map-get($val , "space");
+        --space-#{$prop}: #{$space};
+        }
+    }
+
+    @each $prop, $val in get('color') {
+        --#{$prop}: #{$val};
+    }
+}
