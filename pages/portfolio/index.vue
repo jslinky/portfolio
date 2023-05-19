@@ -1,5 +1,5 @@
 <template>
-    <div class="main-portfolio__index" v-if="supportsContainers">
+    <div class="main-portfolio__index" v-if="supportsContainers && !isLoading">
         <h1><span>My</span> portfolio</h1>
         <!-- <section>
             <nuxt-link v-for="(project, i) in projects.portfolio" :key="`project-${i}`" :to="`/portfolio/${project.slug}`">{{ project.title }}</nuxt-link>
@@ -18,8 +18,13 @@
         </div>
     </div>
     <div v-else class="not-supported container">
-        <h2 class="heading heading--6xl">Whoa, dude!</h2>
-        <p class="text-m">Your browser's like, totally outta time, man. It's missing out on our cool container queries. Time for a journey, upgrade that bad boy to the here and now. Surf the web waves with us, man!</p>
+        <div v-if="isLoading">
+            <Spinner />
+        </div> 
+        <div v-else>
+            <h2 class="heading heading--6xl">Whoa, dude!</h2>
+            <p class="text-m">Your browser's like, totally outta time, man. It's missing out on our cool container queries. Time for a journey, upgrade that bad boy to the here and now. Surf the web waves with us, man!</p>
+        </div>
     </div>
 </template>
 
@@ -43,9 +48,16 @@ definePageMeta({
 })
 
 let supportsContainers = ref(false)
+let isLoading = ref(true)
 
 onMounted(() => {
-    if (process.client) supportsContainers.value = window.CSS ? window.CSS.supports('font-size', '1cqw') : false
+    if (process.client) {
+        supportsContainers.value = window.CSS ? window.CSS.supports('font-size', '1cqw') : false
+        window.setTimeout(() => {
+            isLoading.value = false
+        }, 1000)
+    } 
+
 })
 
 
