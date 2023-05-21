@@ -10,4 +10,7 @@ export default defineNuxtConfig({
     routeRules: {
         '/': { redirect: '/portfolio' },
     },    
+    modules: [
+        '@pinia/nuxt',
+      ],    
 })

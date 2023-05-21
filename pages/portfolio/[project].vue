@@ -1,6 +1,5 @@
 <template>
-    
-    <article class="main-portfolio__article">
+    <article class="main-portfolio__article" :class="{'next': store.step === 'next', 'prev': store.step === 'prev'}">
         <div class="main-portfolio__article-container">
             <div class="main-portfolio__visual">                
                 <!-- <img src="~/assets/placeholder/mitchell-luo-SEuldZb2Avc-unsplash.jpg" /> -->
@@ -30,12 +29,19 @@
                     </swiper-slide>  
                 </swiper-container>                          
                 <template v-else>
-                    <img :src="image" />
+                    <img :src="image[0]" />
                 </template>
                 <Spinner />
             </div> 
             <div class="main-portfolio__content flow">
+                <Transition
+                    @before-enter="onBeforeEnter"
+                    @enter="onEnter"
+                    @leave="onLeave"
+                    @after-leave="onAfterLeave"
+                    >
                 <h2 class="main-portfolio__title">{{ title }}</h2>
+                </Transition>
                 <div class="main-portfolio__tags">
                     <button v-for="(tag, i) in tags" :key="i">{{ tag }}</button>
                 </div>            
@@ -50,60 +56,67 @@
         <PrevNext :config="{nextLink, prevLink, nextTitle, prevTitle}" />        
 
     </article>
-
 </template>
 
 <script setup>
 
+import { useMainStore } from '~/store/index'
 import { register } from 'swiper/element/bundle';
 
 register();
 
 const projects = useProjectData()
 const route = useRoute()
-
-// definePageMeta({
-//   pageTransition: {
-//     name: 'custom-flip',
-//     mode: 'out-in',
-//     onBeforeEnter: (el) => {},
-//     onEnter: (el, done) => {},
-//     onAfterEnter: (el) => {}
-//   }
-// })
+const store = useMainStore()
 
 
 const spaceBetween = 0;
-// const onProgress = (e) => {
-//     const [swiper, progress] = e.detail;
-//     console.log(progress)
-// };
 
-// const onSlideChange = (e) => {
-//     console.log('slide changed')
-// }
+const projArr = computed(() => {
+    return projects.portfolio.map((proj, index) => {
+        proj.id = index
+        return proj
+    })
+})
 
-const project = computed(() => projects.portfolio.find((proj) => proj.slug === route.params.project)) 
+const project = computed(() => projArr.value.find((proj) => proj.slug === route.params.project)) 
 const { title, description, image, url } = project.value
 
-const projectIndex = computed(() => projects.portfolio.map((proj) => proj.slug).indexOf(project.value.slug))
-const projectsLength = computed(() => projects.portfolio.length - 1)
+// const projectIndex = computed(() => prodArr.value.map((proj) => proj.slug).indexOf(project.value.slug))
+const projectIndex = computed(() => project.value.id)
+const projectsLength = computed(() => projArr.value.length - 1)
+
 
 const isNext = computed(() => projectIndex.value + 1 <= projectsLength.value)
 const isPrev = computed(() => projectIndex.value - 1 >= 0)
 
-const nextLink = computed(() => isNext.value ? `/portfolio/${projects.portfolio[projectIndex.value + 1].slug}` : `/portfolio/${projects.portfolio[0].slug}`)
-const prevLink = computed(() => isPrev.value ? `/portfolio/${projects.portfolio[projectIndex.value - 1].slug}` : `/portfolio/${projects.portfolio[projects.portfolio.length - 1].slug}`)
+const nextLink = computed(() => isNext.value ? `/portfolio/${projArr.value[projectIndex.value + 1].slug}` : `/portfolio/${projArr.value[0].slug}`)
+const prevLink = computed(() => isPrev.value ? `/portfolio/${projArr.value[projectIndex.value - 1].slug}` : `/portfolio/${projArr.value[projArr.value.length - 1].slug}`)
 
-const nextTitle = computed(() => isNext.value ? `${projects.portfolio[projectIndex.value + 1].title}` : `${projects.portfolio[0].title}`)
-const prevTitle = computed(() => isPrev.value ? `${projects.portfolio[projectIndex.value - 1].title}` : `${projects.portfolio[0].title}`)
+const nextTitle = computed(() => isNext.value ? `${projArr.value[projectIndex.value + 1].title}` : `${projArr.value[0].title}`)
+const prevTitle = computed(() => isPrev.value ? `${projArr.value[projectIndex.value - 1].title}` : `${projArr.value[0].title}`)
 
 const tags = computed(() => {
     return project.value.tags
 })
 
-function getPageIndex(route) {
-    return projects.portfolio.findIndex((proj) => proj.slug === route.params.project)
-}
+// function getPageIndex(route) {
+//     return projects.portfolio.findIndex((proj) => proj.slug === route.params.project)
+// }
+
+onBeforeRouteUpdate((to, from) => {
+    const fromId = projArr.value.find((proj) => from.params.project === proj.slug).id
+    const toId = projArr.value.find((proj) => to.params.project === proj.slug).id
+    toId > fromId ? store.setStep('next') : store.setStep('prev')
+})
+
 
 </script>
+
+<style scoped>
+
+.article-root {
+    height:100%;
+}
+
+</style>

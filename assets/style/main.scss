@@ -205,6 +205,7 @@ summary {
     transform: rotateX(30deg) rotateY(14deg) rotateZ(-23deg);
     z-index:1;
     transition: all 2s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow:hidden;
     &:hover {
         transform: rotateX(10deg) rotateY(0deg) rotateZ(3deg);
     }
