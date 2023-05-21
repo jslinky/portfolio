@@ -207,7 +207,7 @@ summary {
     transition: all 2s cubic-bezier(0.23, 1, 0.320, 1);
     overflow:hidden;
     &:hover {
-        transform: rotateX(10deg) rotateY(0deg) rotateZ(3deg);
+        transform: rotateX(10deg) rotateY(0deg) rotateZ(3deg) scale(1.2);
     }
     img {
         width: 100%;
