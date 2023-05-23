@@ -4,32 +4,26 @@
             <div class="main-portfolio__visual">                
                 <!-- <img src="~/assets/placeholder/mitchell-luo-SEuldZb2Avc-unsplash.jpg" /> -->
                 <swiper-container
-                    v-if="image.length > 1"
+                    v-if="images.length > 1"
                     :slides-per-view="1"
                     :space-between="spaceBetween"
-                    :navigation="false"
-                    :effect= "fade"
-                    :autoplay = "{
-                        delay: 3000,
-                    }"                
+                    :navigation="true"
                     :centered-slides="true"
-                    :pagination="{
-                    hideOnClick: true
-                    }"
-                    :breakpoints="{
-                    768: {
-                        slidesPerView: 1,
-                    },
-                    }"
+                    :autoplay = "{
+                        delay: 5000,
+                    }"                        
+
                     @progress="onProgress"
                     @slidechange="onSlideChange"
                 >                
-                    <swiper-slide v-for="(img, i) in image" :key="i">
-                        <img :src="img" />
+                    <swiper-slide v-for="(img, i) in images" :key="i">                        
+                        <VideoPlayer :videoId="img.videoId" v-if="img.videoId" />                        
+                        <img v-else :src="img.url" :alt="img.alt.length > 0 ? img.alt : title" />
                     </swiper-slide>  
                 </swiper-container>                          
                 <template v-else>
-                    <img :src="image[0]" />
+                    <VideoPlayer :videoId="images[0].videoId" v-if="images[0].videoId" />
+                    <img v-else :src="images[0].url" :alt="images[0].alt.length > 0 ? images[0].alt : title" />
                 </template>
                 <Spinner />
             </div> 
@@ -80,7 +74,7 @@ const projArr = computed(() => {
 })
 
 const project = computed(() => projArr.value.find((proj) => proj.slug === route.params.project)) 
-const { title, description, image, url } = project.value
+const { title, description, images, url } = project.value
 
 // const projectIndex = computed(() => prodArr.value.map((proj) => proj.slug).indexOf(project.value.slug))
 const projectIndex = computed(() => project.value.id)
@@ -103,6 +97,7 @@ const tags = computed(() => {
 // function getPageIndex(route) {
 //     return projects.portfolio.findIndex((proj) => proj.slug === route.params.project)
 // }
+
 
 onBeforeRouteUpdate((to, from) => {
     const fromId = projArr.value.find((proj) => from.params.project === proj.slug).id

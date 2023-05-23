@@ -206,10 +206,13 @@ summary {
     z-index:1;
     transition: all 2s cubic-bezier(0.23, 1, 0.320, 1);
     overflow:hidden;
-    &:hover {
-        transform: rotateX(10deg) rotateY(0deg) rotateZ(3deg) scale(1.2);
+    &:has(iframe) {
+        aspect-ratio: 1921 / 1120;
     }
-    img {
+    &:hover {
+        transform: rotateX(8deg) rotateY(0deg) rotateZ(0deg) scale(1.2);
+    }
+    :is(img, iframe) {
         width: 100%;
         height:100%;
         object-fit: cover;
@@ -220,8 +223,22 @@ summary {
         position: relative;
         height:100%;
         z-index:1;
+        --swiper-theme-color: var(--c-primary);     
+        --swiper-navigation-size: var(--text-4xl);    
+        .swiper-button-next, .swiper-button-prev {
+            background: var(--c-background);
+            padding: var(--space-s) var(--space-m);
+            
+        }        
     }
+    
 }
+
+.swiper-pagination {
+    pointer-events:none;
+}
+
+
 
 .main-portfolio__content {
     // grid-area: content; 
@@ -390,7 +407,7 @@ summary {
 
 .main-portfolio {
     position: fixed;
-    --header-height: clamp(7rem, 15vmin, 10rem);
+    --header-height: clamp(6rem, 15vmin, 10rem);
     --prevNext-height: 6rem;
     --article-grid-cols: repeat(auto-fill, minmax(max(500px, 33vw), 1fr));
     --article-grid-rows: auto;
@@ -399,7 +416,7 @@ summary {
 
     // grid-template-rows: var(--header-height) 1fr;
     grid-template-rows: 1fr;
-    --content-padding-inline: 5cqi;
+    --content-padding-inline: clamp(3cqi, 2vmin, 5cqi);
     container-name: portfolio;
     container-type: inline-size;      
     header {
@@ -508,11 +525,30 @@ summary {
 
 @container portfolio (max-width: 550px) {
 
+    // .main-portfolio {
+    //     header {
+    //         position:relative;
+    //     }
+    // }
+
+    // .main-portfolio__article {
+    //     padding-block-start:0;
+    // }
+
     .main-portfolio__visual {
-        width: 110vw;
+        width: 100vw;
         margin-inline: calc(-50vw + 50%);
         max-width: none;
-        aspect-ratio: 10 / 11;    
+        aspect-ratio: 3 / 2;
+        min-height: 35dvh;
+        transform: none;     
+        &:hover {
+            transform:none;
+        }   
+        &:has(iframe) {
+            aspect-ratio: 1921 / 1120;
+            min-height:auto;            
+        }
     }
 
 }
@@ -620,13 +656,17 @@ summary {
 }
 
 .main-portfolio__projects {
-    --gap: clamp(2rem, 5cqw, 4rem);    
-    height: calc(100vh - (min(15cqi, 6rem) * 2)); // * 2 for mobile
+    --gap: clamp(2rem, 5cqw, 4rem);        
+    height: calc(100vh - (min(30cqi, 7rem) * 2)); // * 2 for mobile
+    @supports (min-height: 100dvh) {
+        height: calc(100dvh - (min(18cqi, 7rem) * 2)); // * 2 for mobile
+    }    
     display: grid;
     grid-template-columns: repeat( auto-fill, minmax( clamp( 33.3333% - var(--gap), (40rem - 100%) * 999, 100%), 1fr ) );
     gap: var(--gap);
     scroll-snap-align: start;
     perspective: 500px;
+    scroll-margin: 0.75rem 0;
     @media (max-width:50em) {
         grid-template-columns: repeat(2, 1fr);        
     } 

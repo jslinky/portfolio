@@ -19,12 +19,17 @@ const layout = computed(() => route.path == '/' ? 'index' : 'portfolio')
 
 .rotate-enter-active,
 .rotate-leave-active {
-  transition: all 2.4s;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+  .main-portfolio__projects-container {
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
 }
 .rotate-enter-from,
 .rotate-leave-to {
   opacity: 0;
-  transform: rotate3d(1, 1, 1, 15deg);
+  .main-portfolio__projects-container {
+    transform: rotate3d(1, 1, 1, 15deg);
+  }
 }
 
 .page-enter-active,

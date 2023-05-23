@@ -5,7 +5,6 @@ export default {
             title: "Competition framework",
             slug: "competition-framework",
             description: `<h3>Overview</h3>
-
             <p>One of Holograph's key offerings has been creating end-to-end consumer competition campaigns. A QR code takes the consumer to a form which collates data for the competition including name, age range, location, purchase location etc. Redeemable codes can be sent out as instant prize wins or winners can be selected using a fulfilment interface. Associated branded dashboards give valuable insight into key metric campaign data.</p>
             <details open>
             <summary>
@@ -13,61 +12,64 @@ export default {
             </summary>
             <div>
             <p>With the company having had some experience in creating a number of these campaigns in the past, each offering was a bespoke project. This became a time-consuming process. We wanted to move away from this custom, somewhat ad hoc approach and produce a competition framework, in which a new instance could be spun up in moments, while at the same time being highly configurable from a config file. </p>
-            
-            <p>I set up to identify and produce a report on what steps we could take realise this vision. At the same time I produced a prototype from what this might look like from a front-end perspective.</p>
-            
+            <p>I set up to identify and produce a report on what steps we could take to realize this vision. At the same time, I produced a prototype of what this might look like from a front-end perspective.</p>
             <ul>
             <li>A new core page layout structure</li>
             <li>A new style-config JSON file allowing for layout and styling configuration</li>
             <li>A core SCSS codebase built alongside the template for quick CSS property overrides</li>
             <li>Extensive use of CSS custom properties for theming and global style values</li>
-            <li>Codebase rewritten using vue3 with components and pinia for global storage.</li>
+            <li>Codebase rewritten using Vue 3 with components and Pinia for global storage.</li>
             </ul>
             </div>
             </details>
             `,
-            image: ["/img/competition-form.png", "/img/comp-template-option-1.png", "/img/comp-template-option-2.png"],
-            // url: "http://project1.example.com",
+            images: [
+              { url: "/img/competition-form.png", alt: "" },
+              { url: "/img/comp-template-option-1.png", alt: "" },
+              { url: "/img/comp-template-option-2.png", alt: "" }
+            ],
             tags: ['design', 'html', 'css', 'typescript', 'vue', 'pinia', 'UI']
         },
         {
             title: "Competition dashboard",
             slug: "competition-dashboard",
             description: `<h3>Overview</h3>
-
-            <p>An important recent project at Holograph is our comprehensive dashboard designed to support our online competition offerings. This dynamic dashboard provides real-time data on key metrics, such as the number of QR code scans, unique website visitors, competition entries, new subscriptions, claimed and expired prizes, as well as wins distributed throughout the day. Additionally, the dashboard presents an easy-to-understand visual timeline of the competition campaign. The dashboard, adorned with associated branding, is a powerful tool for gaining valuable insights into campaign performance and customer behaviour.</p>
+            <p>An important recent project at Holograph is our comprehensive dashboard designed to support our online competition offerings. This dynamic dashboard provides real-time data on key metrics, such as the number of QR code scans, unique website visitors, competition entries, new subscriptions, claimed and expired prizes, as well as wins distributed throughout the day. Additionally, the dashboard presents an easy-to-understand visual timeline of the competition campaign. The dashboard, adorned with associated branding, is a powerful tool for gaining valuable insights into campaign performance and customer behavior.</p>
             <details open>
             <summary>
             Role
             </summary>
             <div>
-            <p>In this project, I played a pivotal role as the principal designer of the default dashboard. My primary responsibilities involved crafting the underlying HTML and CSS structures of the dashboard, ensuring a solid and well-optimized foundation for the interface. Beyond this, I developed the dashboard to be theme-compatible with the associated competition. This entailed integrating versatile design elements and accommodating aesthetic adjustments in line with the branding of each unique competition campaign. </p>        
+            <p>In this project, I played a pivotal role as the principal designer of the default dashboard. My primary responsibilities involved crafting the underlying HTML and CSS structures of the dashboard, ensuring a solid and well-optimized foundation for the interface. Beyond this, I developed the dashboard to be theme-compatible with the associated competition. This entailed integrating versatile design elements and accommodating aesthetic adjustments in line with the branding of each unique competition campaign.</p>
             </div>
             </details>
             `,
-            image: ["/img/starfield-dashboard.jpg", "/img/holo-dashboard.jpg"],
-            // url: "http://project1.example.com",
+            images: [
+              { url: "/img/starfield-dashboard.jpg", alt: "Lucozade Starfield Competition Dashboard" },
+              { url: "/img/holo-dashboard.jpg", alt: "" }
+            ],
             tags: ['design', 'html', 'css', 'UI']
-        },        
+        },
         {
             title: "Xbox / Starfield Competition",
             slug: "xbox-starfield",
-            description: `
-            <h3>Overview</h3>
-            <p>Holograph developed an instant win and draw competition for Lucozade (Energy) and their XBox partnership, in association with Bethesda Softworks. This cross promotional tie-in focused on the highly anticipated upcoming game, Starfield.  Through the means of approximately 13,000 POS across UK & Ireland channels. Approximately 98 million on-pack bottles will contain a QR code linking to the competition, where the consumer is encouraged to ‘Scan to Win’.</p>            
-            <details open>
+            description: `<h3>Overview</h3>
+            <p>One of our most exciting projects at Holograph was designing and implementing an online competition in collaboration with Xbox and the release of their highly anticipated game, Starfield. The competition allowed participants to enter for a chance to win exclusive Xbox merchandise, including limited-edition Starfield consoles and accessories. The competition page featured stunning visual designs inspired by the game, engaging animations, and a user-friendly interface to maximize user participation and excitement.</p>
+            <details>
             <summary>
-            My Role
+            Role
             </summary>
             <div>
-            <p>I worked on aspects of the design, taking a rough low-fi flow and developing on loose but existing design guidelines. This afforded some level of create freedom.</p>            
-            <p>This project was the first to incorporate many of the ideas I developed in my competition prototype, which at the time I was still working on. I worked on the general front-end (not relating to mechanics or user flow), styling and animation on the project.</p>                        
+            <p>As the lead front-end developer and designer, I spearheaded the implementation of the competition page. Leveraging my expertise in CSS, TypeScript, and Vue.js, I crafted a visually appealing and responsive web experience that captured the essence of Starfield's captivating universe. I collaborated closely with the design team to ensure pixel-perfect accuracy and seamless integration of their creative vision into the final product. The result was an immersive and engaging competition page that successfully generated buzz and drove participation among Xbox and Starfield enthusiasts.</p>
             </div>
             </details>
             `,
-            image: ["/img/starfield-entry.jpg"],
-            url: ["https://www.lucozade.com/"],
-            tags: ['design', 'css', 'typescript', 'vue', 'UI', 'animation']        
+            images: [
+              { url: "/img/starfield-entry.jpg", alt: "", videoId: "829192342" },
+              { url: "/img/starfield-entry.jpg", alt: "", }
+            ],
+            url: ["https://www.lucozade.com/competitions/energy/starfield/form/"],
+            tags: ['design', 'css', 'typescript', 'vue', 'UI', 'animation']
         },
         {
             title: "Ribena",
@@ -84,7 +86,9 @@ export default {
             </div>
             </details>
             `,
-            image: ["/img/ribena-home.png"],
+            images: [
+                { url: "/img/ribena-home.png", alt: "" }
+            ],
             url: ["https://www.ribena.co.uk/"],
             tags: ['html', 'css', 'typescript', 'UI', 'animation']        
         },
@@ -103,7 +107,7 @@ export default {
             </div>
             </details>            
             `,
-            image: ["/img/lucozade-home.png"],
+            images: [ { url: "/img/lucozade-home.png", alt: "" } ],
             url: ["https://www.lucozade.com/"],
             tags: ['html', 'css', 'typescript', 'UI', 'animation']
         },
@@ -122,7 +126,11 @@ export default {
             </div>
             </details>                          
             `,
-            image: ["/img/holo-design-lanaguage-1.jpg", "/img/holo-design-lanaguage-2.jpg", "/img/holo-design-lanaguage-3.jpg"],
+            images: [ 
+                { url: "/img/holo-design-lanaguage-1.jpg", alt:"" }, 
+                { url: "/img/holo-design-lanaguage-2.jpg", alt: "" }, 
+                { url: "/img/holo-design-lanaguage-3.jpg", alt: "" }
+            ],
             tags: ['design', 'UI', 'UX']
         },  
         {
@@ -130,7 +138,10 @@ export default {
             slug: "one-suntory",
             // description: `                         
             // `,
-            image: ["/img/one-suntory-news.jpg", "/img/one-suntory-news-page.jpg"],
+            images: [
+                { url: "/img/one-suntory-news.jpg", alt: "" }, 
+                { url: "/img/one-suntory-news-page.jpg", alt: ""}
+            ],
             tags: ['css']
         },                
         {
@@ -148,7 +159,7 @@ export default {
             </div>
             </details>             
             `,
-            image: ["/img/ehs-incident.png"],
+            images: [ { url: "/img/ehs-incident.png", alt: "" }],
             // url: [],
             tags: ['html', 'css', 'UI', 'design']
         },
@@ -167,7 +178,7 @@ export default {
             </div>
             </details>                         
             `,
-            image: ["/img/holo-promo.jpg"],
+            images: [ { url: "/img/holo-promo.jpg", alt: "" }],
             url: ["https://holo.promo/articles/published"],
             tags: ['html', 'css', 'UI']
         },
@@ -175,7 +186,7 @@ export default {
             title: "Listerine competition",
             slug: "listerine-competition",
             // description: "This is project 2.",
-            image: ["/img/listerine.jpg"],
+            images: [{ url: "/img/listerine.jpg", alt: ""}],
             // url: ["http://project2.example.com"],
             tags: ['html', 'css', 'UI']
         },
@@ -183,7 +194,10 @@ export default {
             title: "Content Manager",
             slug: "content-manager",
             // description: "This is project 2.",
-            image: ["/img/content-manager-template.png", "/img/content-manager-listing.png"],
+            images: [ 
+                { url: "/img/content-manager-template.png", alt: "" }, 
+                { url: "/img/content-manager-listing.png", alt: "" }
+            ],
             tags: ['html', 'css', 'UI', 'design']
         },
         {
@@ -204,7 +218,7 @@ export default {
             </div>
             </details>                         
             `,
-            image: ["/img/jack-wills-1.jpg"],
+            images: [ { url:"/img/jack-wills-1.jpg", alt: "" }],
             tags: ['html', 'css', 'UI', 'javascript']      
         },  
         {
@@ -214,7 +228,7 @@ export default {
             <h3>Overview</h3>
             <p>Website design for personal trainer company</p>
             `,
-            image: ["/img/fortitude-fitness.jpg"],
+            images: [{ url: "/img/fortitude-fitness.jpg", alt: "" }],
             tags: ['design', 'logo', 'html', 'css', 'javascript', 'animation'] 
         },  
         {
@@ -224,7 +238,7 @@ export default {
             <h3>Overview</h3>
             <p>Logo design for small local building company</p>
             `,
-            image: ["/img/smallworks.png"],
+            images: [{ url: "/img/smallworks.png", alt: ""}],
             tags: ['design', 'logo'] 
         }, 
         {
@@ -234,14 +248,14 @@ export default {
             <h3>Overview</h3>
             <p>Various personal mix covers and music related artwork</p>
             `,
-            image: ["/img/music-artwork.jpg"],
+            images: [{ url: "/img/music-artwork.jpg", alt: ""}],
             tags: ['design'] 
         },                     
         {
             title: "RAD Space",
             slug: "rad-space",
             // description: "This is project 2.",
-            image: ["/img/radspace.jpg"],
+            images: [{ url: "/img/radspace.jpg", alt: ""}],
             tags: ['design']      
         },
         {
@@ -259,7 +273,10 @@ export default {
             </div>
             </details>               
             `,
-            image: ["/img/arts-alliance-media.jpg", '/img/vizumi.jpg'],
+            images: [
+                { url: "/img/arts-alliance-media.jpg", alt: ""}, 
+                { url: '/img/vizumi.jpg', alt: ""}
+            ],
             tags: ['design', 'html', 'css'],
             url: ['https://www.artsalliancemedia.com/']
         },  
@@ -278,7 +295,7 @@ export default {
             </div>
             </details>              
             `,
-            image: ["/img/planet-recruit.jpg"],
+            images: [{ url: "/img/planet-recruit.jpg", alt: ""}],
             tags: ['design', 'html', 'css']
         },             
         {
@@ -288,7 +305,7 @@ export default {
             <h3>Overview</h3>
             <p>Website design for estate agent</p>
             `,
-            image: ["/img/wyatt-hughes.jpg"],
+            images: [{ url: "/img/wyatt-hughes.jpg", alt: ""}],
             tags: ['design'] 
         }, 
         {
@@ -307,28 +324,28 @@ export default {
             </details>              
 
             `,
-            image: ["/img/dating.jpg"],
+            images: [{ url: "/img/dating.jpg", alt: ""}],
             tags: ['design', 'html', 'css']      
         },                            
         {
             title: "Sky Mobile",
             slug: "sky-mobile",
             // description: "This is project 2.",
-            image: ["/img/sky-mobile.jpg"],
+            images: [{ url: "/img/sky-mobile.jpg", alt: ""}],
             tags: ['design', 'html', 'css']   
         },  
         {
             title: "Smirnoff Engagement Tool",
             slug: "smirnoff-engagement-tool",
             // description: "This is project 2.",
-            image: ["/img/smirnoff.jpg"],
+            images: [{ url: "/img/smirnoff.jpg", alt: ""}],
             tags: ['design', 'html', 'css']     
         }, 
         {
             title: "Reed Creative",
             slug: "reed-creative",
             // description: "This is project 2.",
-            image: ["/img/reed-creative.jpg"],
+            images: [{ url: "/img/reed-creative.jpg", alt: ""}],
             tags: ['design', 'html', 'css']      
         },                                                     
       ]

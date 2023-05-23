@@ -10,7 +10,7 @@
                 <div v-for="(item, itemIndex) in chunk" :key="item" :style="{'--itemIndex': itemIndex }" class="main-portfolio__project-item">
                     <nuxt-link :to="`/portfolio/${item.slug}`" :title="item.title">
                         <span><strong>{{ item.title }}</strong></span>
-                        <img :src="item.image[0]" loading="lazy" :alt="item.title" />
+                        <img :src="item.images[0].url" loading="lazy" :alt="item.title" />
                     </nuxt-link>                    
                 </div>
                 </TransitionGroup>
