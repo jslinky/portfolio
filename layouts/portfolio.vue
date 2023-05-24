@@ -43,7 +43,7 @@ const isProjectPath = computed(() => route.path.split('/').length > 2)
 
 onMounted(() => {
     if (process.client) {
-        applySlidingAnimations(config)       
+        // applySlidingAnimations(config)       
     }
 })
 
