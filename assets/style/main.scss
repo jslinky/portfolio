@@ -349,7 +349,9 @@ summary {
         translate: -50% -50%;
         scale: var(--pseudo-scale, 1.165);
         // z-index: -1;
-        transition: scale 1350ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        @media(pointer: fine) {
+            transition: scale 1350ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
     }
     &:before {
         z-index:-2;
@@ -363,24 +365,32 @@ summary {
         -webkit-mask-repeat: no-repeat;  
         z-index:-1
     }
-    &:hover {
-        &:before {
-            --pseudo-scale: 1.25;
-            filter: brightness(1.15);
-        }
-        &:after {
-            --pseudo-scale: 1.125;            
-            // -webkit-mask: var(--pseudo-bg);
-            // -webkit-mask-size: contain;
-            // -webkit-mask-position: center;
-            // -webkit-mask-repeat: no-repeat;              
-        }        
-    }   
+    @media(pointer: fine) {
+        &:hover {
+            &:before {
+                --pseudo-scale: 1.25;
+                filter: brightness(1.15);
+            }
+            &:after {
+                --pseudo-scale: 1.125;            
+                // -webkit-mask: var(--pseudo-bg);
+                // -webkit-mask-size: contain;
+                // -webkit-mask-position: center;
+                // -webkit-mask-repeat: no-repeat;              
+            }        
+        }   
+    }
     .button__subtitle {
         border-top: 1px solid var(--c-dark);
         padding-top: var(--space-s);
         margin-top: var(--space-s);
     }     
+    @media(any-pointer: coarse) {
+        height: clamp(5rem, 1rem + 6vw, 8rem);
+        max-height: calc(100% - 1rem);
+        width: auto;        
+    }
+
 }
 
 .main-portfolio__back {
@@ -389,9 +399,13 @@ summary {
     }
     &:before {
         position: relative;
-        --pseudo-bg: url('~/assets/arrow-back.png');
-        --pseudo-width: 32px;
-        --pseudo-height: 32px;
+        // --pseudo-bg: url('~/assets/arrow-back.png');
+        --pseudo-width: 0;
+        --pseudo-height: 0;
+        border-top: 8px solid transparent;
+        border-right: 13px solid var(--c-dark);
+        border-bottom: 8px solid transparent;
+        margin-inline-end: var(--space-s);
     }
 }
 
@@ -435,6 +449,9 @@ summary {
         a {
             pointer-events: all;
         }
+    }
+    .header--project {
+        background: var(--c-background);
     }
     :where(section) {
         height:100%;
@@ -511,7 +528,7 @@ summary {
         width: 100vw;
         margin-inline: calc(-50vw + 50%); 
         background: var(--c-background);   
-        min-height: max-content;    
+        // min-height: max-content;    
         ul {
             padding-inline-start: 0;
         }
