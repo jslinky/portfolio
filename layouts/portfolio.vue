@@ -1,22 +1,25 @@
 <template>
     <main class="main-portfolio">        
-        <header class="header" :class="{'header--project': isProjectPath}">
+        <header class="header" :class="{'header--project': store.projectPath.length > 1 }">
+            <!-- <header class="header"> -->
+            <!-- <header class="header"> -->
             <div class="header__inner">
                 <nuxt-link to="/portfolio" title="Back to portfolio">
-                    <Logo /><p style="position:fixed">{{ x }} {{ y }}</p>
+                    <Logo />
                 </nuxt-link> 
             </div>
         </header>
         <section ref="section">
-            <NuxtPage />
+            <NuxtPage />            
         </section>
     </main>
 </template>
 
 <script setup>
-const route = useRoute()
-
+import { useMainStore } from '~/store/index'
 import { applySlidingAnimations } from '~/composables/scrollHeader';
+
+const store = useMainStore()
 
 const config = {
     value: true,
@@ -39,12 +42,8 @@ const config = {
     }    
 } 
 
-const isProjectPath = computed(() => route.path.split('/').length > 2)
-
 onMounted(() => {
-    if (process.client) {
-        // applySlidingAnimations(config)       
-    }
+    applySlidingAnimations(config)
 })
 
 

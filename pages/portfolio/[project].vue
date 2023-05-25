@@ -98,6 +98,11 @@ const tags = computed(() => {
 //     return projects.portfolio.findIndex((proj) => proj.slug === route.params.project)
 // }
 
+const isProjectPath = computed(() => route.path.split('/').filter(part => part !== ""))
+
+onMounted(() => {
+    store.projectPath = isProjectPath.value
+})
 
 onBeforeRouteUpdate((to, from) => {
     const fromId = projArr.value.find((proj) => from.params.project === proj.slug).id

@@ -30,9 +30,11 @@
 
 
 <script setup>
-
+import { useMainStore } from '~/store/index'
 const ultil = useUtil()
 const projects = useProjectData()
+const route = useRoute()
+const store = useMainStore()
 const chunkSize = 6;
 
 
@@ -50,8 +52,11 @@ definePageMeta({
 let supportsContainers = ref(false)
 let isLoading = ref(true)
 
+const isProjectPath = computed(() => route.path.split('/').filter(part => part !== ""))
+
 onMounted(() => {
     if (process.client) {
+        store.projectPath = isProjectPath.value
         supportsContainers.value = window.CSS ? window.CSS.supports('font-size', '1cqw') : false
         window.setTimeout(() => {
             isLoading.value = false
