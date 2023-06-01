@@ -1,7 +1,4 @@
 <template>
-  
-    <!-- <NuxtWelcome /> -->
-    <!-- <p>Hello world</p> -->
   <NuxtLayout :name="layout">
     <NuxtPage />
   </NuxtLayout>

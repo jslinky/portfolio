@@ -1,7 +1,7 @@
 <template>
     <div class="main-portfolio__nav">
         <ul>
-        <li><nuxt-link to="/portfolio" class="main-portfolio__back button">Back to portfolio</nuxt-link></li>
+        <li><nuxt-link to="/portfolio" class="main-portfolio__back button">View all</nuxt-link></li>
         <li>
           <nuxt-link :to="props.config.prevLink" class="main-portfolio__prev button">
             <span class="button__title">Prev</span>

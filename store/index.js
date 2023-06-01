@@ -5,7 +5,11 @@ export const useMainStore = defineStore({
   id: 'main',
   state: () => ({
     step: '',
-    projectPath: []
+    projectPath: [],
+    filterOptions: ref(['all', 'design', 'css']),
+    filterBy: ref('all'),
+    portfolioIndexLoading: ref(true),
+    isFilterOpen: ref(false)
   }),
   actions: {
     setStep(value) {
@@ -13,6 +17,17 @@ export const useMainStore = defineStore({
     },
     setProjectPath(value) {
       this.projectPath = value
-    }
+    },
+    sortArrayWithVariableFirst(array, variable) {
+      const arrayCopy = [...array];
+      const index = arrayCopy.indexOf(variable);
+    
+      if (index > -1) {
+        arrayCopy.splice(index, 1);
+        arrayCopy.unshift(variable);
+      }
+    
+      return arrayCopy;
+    }    
   },
 })

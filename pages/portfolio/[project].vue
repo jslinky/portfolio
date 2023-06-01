@@ -47,8 +47,7 @@
             </div>
         </div>
 
-        <PrevNext :config="{nextLink, prevLink, nextTitle, prevTitle}" />        
-
+        <PrevNext :config="{nextLink, prevLink, nextTitle, prevTitle}" />             
     </article>
 </template>
 
@@ -66,8 +65,22 @@ const store = useMainStore()
 
 const spaceBetween = 0;
 
+// const projArr = computed(() => {
+//     return projects.portfolio.map((proj, index) => {
+//         proj.id = index
+//         return proj
+//     })
+// })
+
+
 const projArr = computed(() => {
-    return projects.portfolio.map((proj, index) => {
+    let portfolio = null
+    if(store.filterBy !== 'all') {
+        portfolio = projects.portfolio.filter((proj) => proj.tags.indexOf(store.filterBy) !== -1)
+    } else {
+        portfolio = projects.portfolio   
+    }
+    return portfolio.map((proj, index) => {
         proj.id = index
         return proj
     })

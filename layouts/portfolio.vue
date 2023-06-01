@@ -10,6 +10,7 @@
             </div>
         </header>
         <section ref="section">
+            <FilterMenu />
             <NuxtPage />            
         </section>
     </main>
