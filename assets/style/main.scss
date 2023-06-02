@@ -637,7 +637,7 @@ summary {
     max-width: 15ch;
     line-height: 1;
     margin:0;
-    margin-block-start: 0;
+    margin-block-start: calc(var(--content-padding-inline) * 1.5);
     margin-block-end: 0.5em;
     @media (min-min: 768px) {
         margin-block-start: calc(var(--content-padding-inline) * 2.5);
