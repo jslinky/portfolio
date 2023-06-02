@@ -263,6 +263,8 @@ summary {
     width: 100%;
     align-self: stretch;
     overflow: auto; 
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
     padding-inline: var(--content-padding-inline) calc(var(--content-padding-inline) / 1.5);  
     font-size: clamp(0.875rem, 0.75rem + 0.35cqh, 1rem);    
     max-width: min(var(--content-min-width), 100%);
@@ -631,12 +633,15 @@ summary {
 
 .main-portfolio__title {
     @include heading-5xl;
-    --headingFontSize: clamp(var(--text-2xl), 8cqi + 1cqh, var(--text-5xl));
+    --headingFontSize: clamp(var(--text-3xl), 8cqi + 1cqh, var(--text-5xl));
     max-width: 15ch;
     line-height: 1;
     margin:0;
-    margin-block-start: calc(var(--content-padding-inline) * 2.5);
+    margin-block-start: 0;
     margin-block-end: 0.5em;
+    @media (min-min: 768px) {
+        margin-block-start: calc(var(--content-padding-inline) * 2.5);
+    }
 }
 
 .main-portfolio__desc {
