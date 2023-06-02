@@ -72,6 +72,27 @@ const spaceBetween = 0;
 //     })
 // })
 
+watchEffect(() => {
+  let portfolio = null
+  if(store.filterBy !== 'all') {
+    portfolio = projects.portfolio.filter((proj) => proj.tags.indexOf(store.filterBy) !== -1)
+  } else {
+    portfolio = projects.portfolio   
+  }
+  
+  const projArr = portfolio.map((proj, index) => {
+    proj.id = index
+    return proj
+  })
+
+  const project = projArr.find((proj) => proj.slug === route.params.project)
+
+  if (!project) {
+    navigateTo('/portfolio')  // Or push to the route you prefer
+  }
+})
+
+
 
 const projArr = computed(() => {
     let portfolio = null

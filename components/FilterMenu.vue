@@ -95,7 +95,8 @@ function changeFilter() {
     store.portfolioIndexLoading = true
     window.setTimeout(() => {
                 store.portfolioIndexLoading = false
-        }, 500)      
+        }, 500)     
+    menuAnimateClose()
 }
 
 function menuSetState() {

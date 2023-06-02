@@ -1199,8 +1199,8 @@ summary {
     height:100%;
     z-index: 1;
     background: var(--c-grey2);
-    clip-path: circle(0% at bottom right);
-    transition: clip-path 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    // clip-path: circle(0% at bottom right);
+    // transition: clip-path 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .filterList-enter-active, .filterList-leave-active {
