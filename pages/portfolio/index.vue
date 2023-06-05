@@ -1,9 +1,7 @@
 <template>
     <div class="main-portfolio__index" v-if="supportsContainers">
         <h1><span>My</span> portfolio</h1>
-        <!-- <section>
-            <nuxt-link v-for="(project, i) in projects.portfolio" :key="`project-${i}`" :to="`/portfolio/${project.slug}`">{{ project.title }}</nuxt-link>
-        </section> -->
+        <CvIcon />
         <div v-if="!store.portfolioIndexLoading" class="main-portfolio__projects-container" :class="{ 'main-portfolio__projects-container--fade': store.isFilterOpen }">
                 <TransitionGroup name="list" tag="div" v-for="(chunk, i) in chunkedArray" :key="i" :data-index="i" class="main-portfolio__projects" ref="portfolioProjectGroup">
                 <div v-for="(item, itemIndex) in chunk" :key="item" :style="{'--itemIndex': itemIndex }" class="main-portfolio__project-item">
@@ -19,11 +17,10 @@
         </div> 
         <div class="main-portfolio__markers" v-if="!store.portfolioIndexLoading">
             <ul>
-                <li v-for="(no, i) in markerRange" :key="no" :class="{ 'active': i === parseInt(projectGroupIndex)}"></li>
+                <li v-for="(no, i) in markerRange" :key="no" :class="{ 'active': i === parseInt(projectGroupIndex)}"><span>{{ i }}</span></li>
             </ul>
         </div>            
     </div>
-    <!-- <NotSupported v-else /> -->
     <div v-else class="not-supported container">
         <div v-if="store.portfolioIndexLoading">
             <Spinner />
@@ -55,7 +52,8 @@ const projectGroupIndex = ref(0)
 const isProjectPath = computed(() => route.path.split('/').filter(part => part !== ""))
 
 const portfolio = ref([])
-const filterProjects = computed(() => store.filterBy !== 'all' ? portfolio.value.filter((proj) => proj.tags.indexOf(store.filterBy) !== -1) : portfolio.value)
+const filterProjects = computed(() => store.filterBy !== 'all' ? portfolio.value.filter(proj => proj.tags.some((entry) => entry.includes(store.filterBy)) ) : portfolio.value)
+
 
 const { useChunkArray } = ultil
 // const { chunkedArray } = useChunkArray(projects.portfolio, chunkSize);

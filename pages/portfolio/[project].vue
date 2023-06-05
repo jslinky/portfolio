@@ -62,20 +62,12 @@ const projects = useProjectData()
 const route = useRoute()
 const store = useMainStore()
 
-
 const spaceBetween = 0;
-
-// const projArr = computed(() => {
-//     return projects.portfolio.map((proj, index) => {
-//         proj.id = index
-//         return proj
-//     })
-// })
 
 watchEffect(() => {
   let portfolio = null
   if(store.filterBy !== 'all') {
-    portfolio = projects.portfolio.filter((proj) => proj.tags.indexOf(store.filterBy) !== -1)
+    portfolio = projects.portfolio.filter(proj => proj.tags.some((entry) => entry.includes(store.filterBy)))
   } else {
     portfolio = projects.portfolio   
   }
@@ -97,7 +89,7 @@ watchEffect(() => {
 const projArr = computed(() => {
     let portfolio = null
     if(store.filterBy !== 'all') {
-        portfolio = projects.portfolio.filter((proj) => proj.tags.indexOf(store.filterBy) !== -1)
+        portfolio = projects.portfolio.filter(proj => proj.tags.some((entry) => entry.includes(store.filterBy)))
     } else {
         portfolio = projects.portfolio   
     }
