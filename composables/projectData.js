@@ -12,7 +12,7 @@ export default {
             </summary>
             <div>
             <p>With the company having had some experience in creating a number of these campaigns in the past, each offering was a bespoke project. This became a time-consuming process. We wanted to move away from this custom, somewhat ad hoc approach and produce a competition framework, in which a new instance could be spun up in moments, while at the same time being highly configurable from a config file. </p>
-            <p>I set up to identify and produce a report on what steps we could take to realize this vision. At the same time, I produced a prototype of what this might look like from a front-end perspective.</p>
+            <p>I set up to identify and produce a report on what steps we could take to realize this vision. At the same time, I produced a <a href="cdpn.io/wvxRjRB/b1ffaf0ebef20339c779ab1672b12b20" title="competition prototype">prototype</span> of what this might look like from a front-end perspective.</p>
             <ul>
             <li>A new core page layout structure</li>
             <li>A new style-config JSON file allowing for layout and styling configuration</li>
@@ -28,7 +28,7 @@ export default {
               { url: "/img/comp-template-option-1.png", alt: "" },
               { url: "/img/comp-template-option-2.png", alt: "" }
             ],
-            tags: ['design', 'html', 'css', 'typescript', 'vue', 'pinia', 'UI']
+            tags: ['design', 'html', 'scss', 'typescript', 'vue', 'pinia', 'UI']
         },
         {
             title: "Competition dashboard",
@@ -40,7 +40,8 @@ export default {
             Role
             </summary>
             <div>
-            <p>In this project, I played a pivotal role as the principal designer of the default dashboard. My primary responsibilities involved crafting the underlying HTML and CSS structures of the dashboard, ensuring a solid and well-optimized foundation for the interface. Beyond this, I developed the dashboard to be theme-compatible with the associated competition. This entailed integrating versatile design elements and accommodating aesthetic adjustments in line with the branding of each unique competition campaign.</p>
+            <p>In this project, I played a pivotal role as the principal designer of the default dashboard, as well as designing themes for some of clients including Listerine, Lucozade and Ribena. This entailed integrating versatile design elements and accommodating aesthetic adjustments in line with the branding of each unique competition campaign.</p>
+            <p>In addition to designing these dashboards, I also crafted the underlying HTML and CSS structures of the dashboard, ensuring a solid and well-optimized foundation for the interface.</p><p>I also developed the dashboard to be theme-compatible with the associated competition so that variable definitions for the look and feel carried across both projects.</p>
             </div>
             </details>
             `,
@@ -48,19 +49,19 @@ export default {
               { url: "/img/starfield-dashboard.jpg", alt: "Lucozade Starfield Competition Dashboard" },
               { url: "/img/holo-dashboard.jpg", alt: "" }
             ],
-            tags: ['design', 'html', 'css', 'UI']
+            tags: ['design', 'html', 'scss', 'UI']
         },
         {
             title: "Xbox / Starfield Competition",
             slug: "xbox-starfield",
             description: `<h3>Overview</h3>
-            <p>One of our most exciting projects at Holograph was designing and implementing an online competition in collaboration with Xbox and the release of their highly anticipated game, Starfield. The competition allowed participants to enter for a chance to win exclusive Xbox merchandise, including limited-edition Starfield consoles and accessories. The competition page featured stunning visual designs inspired by the game, engaging animations, and a user-friendly interface to maximize user participation and excitement.</p>
+            <p>Designing and implementing an online competition in collaboration with Xbox and the release of their highly anticipated game, Starfield. The competition allowed participants to enter for a chance to win exclusive Xbox merchandise, including limited-edition Starfield consoles and accessories. The competition page featured stunning visual artwork inspired by the game, engaging animations, and a user-friendly interface to maximize user participation and excitement.</p>
             <details>
             <summary>
             Role
             </summary>
             <div>
-            <p>As the lead front-end developer and designer, I spearheaded the implementation of the competition page. Leveraging my expertise in CSS, TypeScript, and Vue.js, I crafted a visually appealing and responsive web experience that captured the essence of Starfield's captivating universe. I collaborated closely with the design team to ensure pixel-perfect accuracy and seamless integration of their creative vision into the final product. The result was an immersive and engaging competition page that successfully generated buzz and drove participation among Xbox and Starfield enthusiasts.</p>
+            <p>As the lead front-end developer and designer, I spearheaded the implementation of the competition page. Leveraging my experience in design, SCSS / CSS, TypeScript, and Vue.js, I crafted a visually appealing and responsive web experience that captured the essence of Starfield's captivating universe. The result was an immersive and engaging competition page that successfully generated buzz and drove participation among Xbox and Starfield enthusiasts.</p>
             </div>
             </details>
             `,
@@ -69,14 +70,15 @@ export default {
               { url: "/img/starfield-entry.jpg", alt: "", }
             ],
             url: ["https://www.lucozade.com/competitions/energy/starfield/form/"],
-            tags: ['design', 'css', 'typescript', 'vue', 'UI', 'animation']
+            tags: ['design', 'scss', 'typescript', 'vue', 'UI', 'animation', 'gsap']
         },
         {
             title: "Ribena",
             slug: "ribena",
             description: `
             <h3>Overview</h3>
-            <p>We were tasked with designing and building a revamped website for Ribena - home of the original much loved blackcurrant soft drink. This would include home, about and sustainability pages swell as a rebuild e-commerce shop.</p>
+            <p>We were tasked with designing and building a revamped website for Ribena - home of the original much loved blackcurrant soft drink. This coincided with their shift in branding to a cartoony, self-deprecating, playful new marketing campaign. This new site would include home, about and sustainability pages aswell as a rebuild e-commerce shop.</p>
+            <p>With it's 
             <details open>
             <summary>
             My Role
@@ -90,7 +92,7 @@ export default {
                 { url: "/img/ribena-home.png", alt: "" }
             ],
             url: ["https://www.ribena.co.uk/"],
-            tags: ['html', 'css', 'typescript', 'UI', 'animation']        
+            tags: ['html', 'scss', 'typescript', 'UI', 'animation', 'gsap']        
         },
         {
             title: "Lucozade Megabrand",
@@ -103,13 +105,13 @@ export default {
             My Role
             </summary>
             <div>
-            <p>Probably one of the largest projects I worked on at Holograph, this job had alot to it and a tight deadline. I worked on the front-end development of the site, templating components, styling all aspects of the site and crafting animations.</p>
+            <p>I worked on the front-end development of the site, utilising the core SCSS framework I had developed for Holograph sites. I build each of the pages including templating all the components and styled all aspects of the site, including animations.</p>
             </div>
             </details>            
             `,
             images: [ { url: "/img/lucozade-home.png", alt: "" } ],
             url: ["https://www.lucozade.com/"],
-            tags: ['html', 'css', 'typescript', 'UI', 'animation']
+            tags: ['html', 'scss', 'typescript', 'UI', 'animation']
         },
         {
             title: "Holograph DXP / DAM",
@@ -142,7 +144,7 @@ export default {
                 { url: "/img/one-suntory-news.jpg", alt: "" }, 
                 { url: "/img/one-suntory-news-page.jpg", alt: ""}
             ],
-            tags: ['css']
+            tags: ['scss']
         },                
         {
             title: "EHS",
@@ -155,13 +157,13 @@ export default {
             My Role
             </summary>
             <div>
-            <p>My role in this project was to work alongside our dev team and produce the HTML structure within each component and apply styling. This project used Angular alongside the Ionic framework.</p>
+            <p>My role in this project was to work alongside our dev team and produce the HTML structure within each component and apply styling to the entire application. This project used Angular alongside the Ionic framework.</p>
             </div>
             </details>             
             `,
             images: [ { url: "/img/ehs-incident.png", alt: "" }],
             // url: [],
-            tags: ['html', 'css', 'UI', 'design']
+            tags: ['html', 'scss', 'UI', 'design']
         },
         {
             title: "Holo promo",
@@ -174,13 +176,13 @@ export default {
             My Role
             </summary>
             <div>
-            <p>This was a new theme I created for the holo.promo front-end of our content manager platform</p>            
+            <p>This was a new theme I created for one of Holograph's internal websites, holo.promo. It utilized our content manager software to create a list of articles.</p>            
             </div>
             </details>                         
             `,
             images: [ { url: "/img/holo-promo.jpg", alt: "" }],
             url: ["https://holo.promo/articles/published"],
-            tags: ['html', 'css', 'UI']
+            tags: ['html', 'scss', 'UI']
         },
         {
             title: "Listerine competition",
@@ -188,17 +190,48 @@ export default {
             // description: "This is project 2.",
             images: [{ url: "/img/listerine.jpg", alt: ""}],
             // url: ["http://project2.example.com"],
-            tags: ['html', 'css', 'UI']
+            tags: ['html', 'scss', 'UI'],
+            description: `<h3>Overview</h3>
+            <p>This was a digital campaign for JnJ's new in-store activation, the Listerine Donkey Campaign, launched on September 12, 2022. This was a unique campaign with dual competitions, an 'Instant Win' and a 'Grand Prize' draw. My role was multi-faceted and instrumental in this project's success.</p>
+            <p>As part of the campaign, we developed a bespoke microsite which hosted the competition's entry form, accessed by scanning a QR code at the point of sale, or through social and online channels. This ensured an accessible and seamless user experience for all entrants.</p>
+            <p>The entry form was carefully crafted to gather essential data from participants such as their name, email, postcode, and age confirmation.</p>            
+            <p>Our team built an efficient entry flow and deployed the form to the website. The back-end was designed to allocate prizes through a non-guaranteed 'winning moments mechanic', which provided instant confirmation to winners. We effectively managed nearly 10,000 digital voucher prizes and close to 800 Donkey toy prizes.</p>            
+            <p>After the 'Instant Win' period, all participants were automatically entered into the 'Grand Prize' draw. This two-stage competition approach boosted the engagement and longevity of the campaign.</p>                        
+            <details open>
+            <summary>
+            Role
+            </summary>
+            <div>
+            <p>I took charge in implementing the design of the landing page, including the application of CSS and other styling techniques, ensuring the page's aesthetic was in-line with JnJ's branding and the campaign's theme.</p>
+            <p>For ease of tracking the campaign's progress, I was also responsible for building a campaign reporting dashboard, offering real-time insights to the client.</p>
+            </div>
+            </details>
+            `,            
         },
         {
             title: "Content Manager",
             slug: "content-manager",
-            // description: "This is project 2.",
+            description: `
+            <h3>Overview</h3>
+            <p>Content Manager was one of Holograph's key software offerings. As a concept it allowed for the creation of articles or content. The content would of a particular type eg (listing) which could be categorised and tagged. That content can they be pushed live to a "stream" which would display on the front-end. It aimed to greatly simplify the creation of content for non-technical content creators.</p>  
+            <details open>
+            <summary>
+            Role
+            </summary>
+            <div>
+            <p>I joined the Holograph team midway through the development roadmap of the Content Manager project, a software solution aimed at simplifying content creation for non-technical creators. At the time of my joining, there were no UI designs in place, presenting a unique challenge and an opportunity for me to truly make an impact.</p>
+            <p>My main objective was to devise an intuitive and user-friendly experience for the software users. Crafting an easy-to-use UX was paramount to the project's success, and it fell to me to conceptualize, design, and iterate over numerous ideas until the optimal solution was found. This process was iterative, involving substantial trial and error, user testing, and feedback integration to ensure the final product truly addressed user needs and was a pleasure to interact with.</p>
+            <p>In tandem with developing the UI/UX design, I had the responsibility to build out SCSS and components. Utilizing SCSS enabled the creation of efficient and maintainable stylesheets, while the design and implementation of reusable components ensured consistency and further increased maintainability.</p>
+            <p>The Content Manager project was comprised of a management system for the backend, and a front-end display system for pushing content live to a stream. To build these systems, we leveraged the capabilities of Angular, a robust and widely-used framework for building dynamic web applications.</p>
+            <p>In this role, my contributions to the project ensured not only the smooth development and implementation of key features, but also significantly enhanced the user experience, which was central to the Content Manager's success. By putting the needs of non-technical content creators first, we were able to deliver a product that truly simplified content creation and management.</p>
+            </div>
+            </details>            
+            `,
             images: [ 
                 { url: "/img/content-manager-template.png", alt: "" }, 
                 { url: "/img/content-manager-listing.png", alt: "" }
             ],
-            tags: ['html', 'css', 'UI', 'design']
+            tags: ['html', 'scss', 'UI', 'design']
         },
         {
             title: "Jack Wills",
@@ -212,14 +245,14 @@ export default {
             </summary>
             <div>
             <ul>
-            <li>Building and developing the core custom CSS framework</li>
+            <li>Building and developing the core custom SCSS framework</li>
             <li>Developing campaign pages for each new range / season</li>
             <li>Working alongside our e-commerce development service provider to further develop and improve our e-com proposition.</li>
             </div>
             </details>                         
             `,
             images: [ { url:"/img/jack-wills-1.jpg", alt: "" }],
-            tags: ['html', 'css', 'UI', 'javascript']      
+            tags: ['html', 'scss', 'UI', 'javascript']      
         },  
         {
             title: "Fortitude Fitness",
@@ -229,7 +262,7 @@ export default {
             <p>Website design for personal trainer company</p>
             `,
             images: [{ url: "/img/fortitude-fitness.jpg", alt: "" }],
-            tags: ['design', 'logo', 'html', 'css', 'javascript', 'animation'] 
+            tags: ['design', 'logo', 'html', 'scss', 'javascript', 'animation'] 
         },  
         {
             title: "Small Works",

@@ -5,18 +5,23 @@
             <nuxt-link v-for="(project, i) in projects.portfolio" :key="`project-${i}`" :to="`/portfolio/${project.slug}`">{{ project.title }}</nuxt-link>
         </section> -->
         <div v-if="!store.portfolioIndexLoading" class="main-portfolio__projects-container" :class="{ 'main-portfolio__projects-container--fade': store.isFilterOpen }" :style="{ '--sectionNo': chunkedArrayLength }">
-                <TransitionGroup name="list" tag="div" v-for="(chunk, i) in chunkedArray" :key="i" class="main-portfolio__projects">
+                <TransitionGroup name="list" tag="div" v-for="(chunk, i) in chunkedArray" :key="i" :data-index="i" class="main-portfolio__projects" ref="portfolioProjectGroup">
                 <div v-for="(item, itemIndex) in chunk" :key="item" :style="{'--itemIndex': itemIndex }" class="main-portfolio__project-item">
                     <nuxt-link :to="`/portfolio/${item.slug}`" :title="item.title">
                         <span><strong>{{ item.title }}</strong></span>
-                        <img :src="item.images[0].url" loading="lazy" :alt="item.title" />
+                        <img :src="item.images[0].url" :alt="item.title" />
                     </nuxt-link>                    
                 </div>
                 </TransitionGroup>
         </div>
         <div class="spinner-invert" v-else>
             <Spinner />
-        </div>     
+        </div> 
+        <div class="main-portfolio__markers" v-if="!store.portfolioIndexLoading">
+            <ul>
+                <li v-for="(no, i) in markerRange" :key="no" :class="{ 'active': i === parseInt(projectGroupIndex)}"></li>
+            </ul>
+        </div>            
     </div>
     <!-- <NotSupported v-else /> -->
     <div v-else class="not-supported container">
@@ -33,13 +38,19 @@
 
 <script setup>
 import { useMainStore } from '~/store/index'
+import { useIntersectionObserver } from '@vueuse/core'
+
 const ultil = useUtil()
 const projects = useProjectData()
 const route = useRoute()
 const store = useMainStore()
 const chunkSize = 6;
 let supportsContainers = ref(false)
-const isVisible = ref(false)
+
+// Intersection observer
+const portfolioProjectGroup = ref();
+const targetIsVisible = ref(false)
+const projectGroupIndex = ref(0)
 
 const isProjectPath = computed(() => route.path.split('/').filter(part => part !== ""))
 
@@ -52,16 +63,25 @@ const chunkedArray = computed(() => useChunkArray(filterProjects.value, chunkSiz
 
 const chunkedArrayLength = computed(() => chunkedArray.value.length)
 
+const markerRange = computed(() => {
+    return Array.from({ length: chunkedArrayLength.value }, (value, index) => index)
+})
+
+
 watch(filterProjects, (oldX, newX) => {
 //   console.log(`filterProjects old is ${oldX}. filterProjects new is ${newX.length}`)
 })
 
-// const { stop } = useIntersectionObserver(
-//     target,
-//     ([{ isIntersecting }], observerElement) => {
-//     targetIsVisible.value = isIntersecting
-//     },
-// )
+const { stop } = useIntersectionObserver(
+    portfolioProjectGroup,
+    ([{ isIntersecting, target }], observerElement) => {
+        if(isIntersecting) {
+            projectGroupIndex.value = target.dataset.index 
+        }
+    targetIsVisible.value = isIntersecting
+    // console.log(targetIsVisible.value, target.dataset.index)
+    },
+)
 
 definePageMeta({
   pageTransition: {

@@ -17,8 +17,8 @@
             <div v-for="option in filterOptionLabels" :key="option" :data-option="option">
                     <input type="radio" :value="option" v-model="store.filterBy" :id="option" :checked="option === store.filterBy" @change="changeFilter" /> 
                     <label :for="option" @click="radioMenuToggle(option)">
-                      <span v-if="option !== 'css'">{{option}}</span>
-                      <span v-else-if="option === 'css'">dev</span>
+                      <span v-if="!option.includes('css')">{{option}}</span>
+                      <span v-else-if="option.includes('css')">dev</span>
                     </label>                    
                 </div>
         </TransitionGroup>             
@@ -58,30 +58,8 @@ function radioMenuToggle(option) {
 }
 
 function menuToggle() {
-    if(store.isFilterOpen) {
-        menuAnimateClose()
-        // menuAnimate('close')
-        // console.log('close')
-    } else {
-        menuAnimateOpen()
-        // menuAnimate('open')
-        // console.log('open')
-    }
+  store.isFilterOpen ? menuAnimateClose() : menuAnimateOpen()
 }
-
-// watch(store.isFilterOpen, (old, new) => {
-//   console.log(old, new)
-// })
-
-// watch(store.isFilterOpen, (oldX, newX) => {
-//   if(newX === 'open') {
-//       menuAnimateOpen()        
-//         // console.log('close')
-//     } else {
-//       menuAnimateClose()
-//         // console.log('open')
-//     }
-// })
 
 const filterAnimationKeyframesOpen = [{ transform: 'translateY(50%)' }, { transform: 'translateY(0)' }];
 const filterAnimationKeyframesClose = filterAnimationKeyframesOpen.reverse();
@@ -107,107 +85,6 @@ function menuSetState() {
   });    
   filterBackdrop.value.style.clipPath  = 'circle(0% at 100% 100%)';
 }
-
-// function menuSetStateTest() {
-
-//   for (const entry of Object.entries(filterAnimationKeyframesOpen[filterAnimationKeyframesOpen.length - 1])) {
-//     filter.value.style[entry[0]] = entry[1] 
-//   }
-
-//   unSelectedOptions.value.forEach(div => {
-//     for (const entry of Object.entries(unSelectedOptionsKeyframesOpen[unSelectedOptionsKeyframesOpen.length - 1])) {
-//       div.style[entry[0]] = entry[1]
-//     }
-//   });
-  
-//   for (const entry of Object.entries(filterBackdropAnimationKeyframesOpen[filterBackdropAnimationKeyframesOpen.length - 1])) {
-//     filterBackdrop.value.style[entry[0]] = entry[1]
-//   }  
-
-// }
-
-
-// function menuAnimate(state) {
-
-//     // const filterAnimationKeyframes = state === 'open' ? filterAnimationKeyframesOpen : filterAnimationKeyframesClose 
-
-//     // // Animate filter
-//     // let filterAnimation = filter.value.animate(filterAnimationKeyframes, {
-//     //   duration: 500,
-//     //   easing: 'ease' 
-//     // });
-
-//     // filterAnimation.onfinish = () => {
-//     //   const prop = state === 'open' ? Object.entries(filterAnimationKeyframesOpen[filterAnimationKeyframesOpen.length - 1])[0][0] : Object.entries(filterAnimationKeyframesClose[filterAnimationKeyframesClose.length - 1])[0][0]
-//     //   const val = state === 'open' ? Object.entries(filterAnimationKeyframesOpen[filterAnimationKeyframesOpen.length - 1])[0][1] : Object.entries(filterAnimationKeyframesClose[filterAnimationKeyframesClose.length - 1])[0][1]
-//     //   for(let i = 0; i < prop.length; i++) {
-//     //     filter.value.style[prop][i] = val[i]  
-//     //   }
-//     // };
-
-//     // const unSelectedOptionsKeyframes = state === 'open' ? unSelectedOptionsKeyframesOpen : unSelectedOptionsKeyframesClose
-
-//     // // Animate each radio group div with staggered delay
-//     // unSelectedOptions.value.forEach((div, index) => {
-//     //   let divAnimation = div.animate(unSelectedOptionsKeyframes, {
-//     //     delay: index * 100, // Adjust delay as needed
-//     //     duration: 500, // Adjust as needed
-//     //     easing: 'ease' // Adjust as needed
-//     //   });
-
-//     //   divAnimation.onfinish = () => {
-//     //     const prop = state === 'open' ? Object.entries(unSelectedOptionsKeyframesOpen[unSelectedOptionsKeyframesOpen.length - 1])[0][0] : Object.entries(unSelectedOptionsKeyframesClose[unSelectedOptionsKeyframesClose.length - 1])[0][0]
-//     //     const val = state === 'open' ? Object.entries(unSelectedOptionsKeyframesOpen[unSelectedOptionsKeyframesOpen.length - 1])[0][1] : Object.entries(unSelectedOptionsKeyframesClose[unSelectedOptionsKeyframesClose.length - 1])[0][1]
-//     //     for(let i = 0; i < prop.length; i++) {
-//     //       div.style[prop][i] = val[i]  
-//     //     }        
-//     //     // div.style.opacity = '1';
-//     //     // div.style.transform = 'scale(1)';
-//     //   };
-//     // });
-
-//     let filterBackdropAnimationKeyframes = null
-
-//     if(state === 'open') {
-//       filterBackdropAnimationKeyframes = filterBackdropAnimationKeyframesOpen
-//     } else {
-//       filterBackdropAnimationKeyframes = filterBackdropAnimationKeyframesClose
-//     }
-
-//     let filterBackdropAnimation = filterBackdrop.value.animate(filterBackdropAnimationKeyframes, {
-//       duration: 500,
-//       easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)'
-//     })
-
-//     filterBackdropAnimation.onfinish = () => {
-//       // const prop = state === 'open' ? Object.entries(filterBackdropAnimationKeyframesOpen[filterBackdropAnimationKeyframesOpen.length - 1])[0][0] : Object.entries(filterBackdropAnimationKeyframesClose[filterBackdropAnimationKeyframesClose.length - 1])[0][0]
-//       // const val = state === 'open' ? Object.entries(filterBackdropAnimationKeyframesOpen[filterBackdropAnimationKeyframesOpen.length - 1])[0][1] : Object.entries(filterBackdropAnimationKeyframesClose[filterBackdropAnimationKeyframesClose.length - 1])[0][1]
-//       // for(let i = 0; i < prop.length; i++) {
-//       //   filterBackdrop.value.style[prop][i] = val[i]  
-//       // }   
-//       // const finishStyles = state === 'open' ? Object.entries(filterBackdropAnimationKeyframesOpen[filterBackdropAnimationKeyframesOpen.length - 1]) : Object.entries(filterBackdropAnimationKeyframesClose[filterBackdropAnimationKeyframesClose.length - 1])
-      
-//       // filterBackdrop.value.style[finishStyles[finishStyles.length - 1][0]] = finishStyles[finishStyles.length - 1][1] 
-
-//       // for (const entry of finishStyles) {
-//       //   filterBackdrop.value.style[entry[0]] = entry[1] 
-//       //   console.log('state', state, 'entry', entry[0], entry[1])
-//       // }      
-
-//       console.log('state', state, 'filterBackdropAnimationKeyframesClose:', filterBackdropAnimationKeyframesClose)
-//       console.log(filterBackdropAnimationKeyframes)
-//       filterBackdropAnimationKeyframes.forEach((entry, i) => {
-//         if(i === filterBackdropAnimationKeyframes.length - 1) {
-//           // filterBackdrop.value.style[entry[0]] = entry[1] 
-//           console.log(entry)
-//         }
-//       })
-
-//       // filterBackdrop.value.style.clipPath  = 'circle(40% at 100% 100%)';
-//     }
-
-//     store.isFilterOpen = !store.isFilterOpen
-// }
 
 function menuAnimateOpen() {
     // Animate filter
@@ -300,8 +177,6 @@ function menuAnimateClose() {
 
     store.isFilterOpen = !store.isFilterOpen
 }
-
-
 
 
 onMounted(() => {

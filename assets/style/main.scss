@@ -514,6 +514,28 @@ summary {
     padding-block-start: var(--header-height);
 }
 
+.main-portfolio__markers {
+    position: fixed;
+    right:0;
+    top: 50%;
+    transform: translateY(-50%);
+    // ul, ol {
+    //     list-style-type: none;
+    // }
+    li {
+        color: var(--c-dark);
+        height: clamp(var(--text-s), var(--text-xs) + 1vw, var(--text-l));
+        font-size: clamp(var(--text-s), 1vw, var(--text-m));        
+        &::marker {
+            color: currentColor;
+            font-size: 1.5em;
+        }
+        &.active {
+            color: var(--c-primary);
+        }
+    }
+}
+
 .main-portfolio__article-container {
     width: 100%;
     justify-content: center;
@@ -1038,7 +1060,7 @@ summary {
 }
 
 .main-portfolio__filter {
-    --inset: clamp(0.75rem, 1vw, var(--space-xl));
+    --inset: 0.75rem;
     --size: 6rem;
     position: fixed;
     bottom: 1.5rem;
