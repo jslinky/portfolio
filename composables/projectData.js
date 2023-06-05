@@ -12,7 +12,7 @@ export default {
             </summary>
             <div>
             <p>With the company having had some experience in creating a number of these campaigns in the past, each offering was a bespoke project. This became a time-consuming process. We wanted to move away from this custom, somewhat ad hoc approach and produce a competition framework, in which a new instance could be spun up in moments, while at the same time being highly configurable from a config file. </p>
-            <p>I set up to identify and produce a report on what steps we could take to realize this vision. At the same time, I produced a <a href="cdpn.io/wvxRjRB/b1ffaf0ebef20339c779ab1672b12b20" title="competition prototype">prototype</span> of what this might look like from a front-end perspective.</p>
+            <p>I set up to identify and produce a report on what steps we could take to realize this vision. At the same time, I produced a <a href="cdpn.io/wvxRjRB/b1ffaf0ebef20339c779ab1672b12b20" title="competition prototype">prototype</a> of what this might look like from a front-end perspective.</p>
             <ul>
             <li>A new core page layout structure</li>
             <li>A new style-config JSON file allowing for layout and styling configuration</li>
@@ -233,6 +233,25 @@ export default {
             ],
             tags: ['html', 'scss', 'UI', 'design']
         },
+        {
+            title: "Holograph Entry System prototype",
+            slug: "entry-system",
+            // description: `
+            // <h3>Overview</h3>
+            // <p></p>
+            // <details open>
+            // <summary>
+            // My Role
+            // </summary>
+            // <div>
+            // <p></p>
+            // </div>
+            // </details>                         
+            // `,
+            images: [ { url:"/img/entry-system.png", alt: "Holograph Entry System Prototype" }],
+            tags: ['design', 'html', 'css', 'UI', 'javascript', 'vue'],
+            url: ["https://mystifying-saha-e0c2d5.netlify.app/"]      
+        },          
         {
             title: "Jack Wills",
             slug: "jack-wills",
