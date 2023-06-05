@@ -4,7 +4,7 @@
         <!-- <section>
             <nuxt-link v-for="(project, i) in projects.portfolio" :key="`project-${i}`" :to="`/portfolio/${project.slug}`">{{ project.title }}</nuxt-link>
         </section> -->
-        <div v-if="!store.portfolioIndexLoading" class="main-portfolio__projects-container" :class="{ 'main-portfolio__projects-container--fade': store.isFilterOpen }" :style="{ '--sectionNo': chunkedArrayLength }">
+        <div v-if="!store.portfolioIndexLoading" class="main-portfolio__projects-container" :class="{ 'main-portfolio__projects-container--fade': store.isFilterOpen }">
                 <TransitionGroup name="list" tag="div" v-for="(chunk, i) in chunkedArray" :key="i" :data-index="i" class="main-portfolio__projects" ref="portfolioProjectGroup">
                 <div v-for="(item, itemIndex) in chunk" :key="item" :style="{'--itemIndex': itemIndex }" class="main-portfolio__project-item">
                     <nuxt-link :to="`/portfolio/${item.slug}`" :title="item.title">

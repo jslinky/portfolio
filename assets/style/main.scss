@@ -950,11 +950,8 @@ summary {
 .main-portfolio__projects-container {
     display: grid;
     gap: 1.5rem;
-    // height: calc(100% * var(--sectionNo, 2));    
-    // transform: rotateX(45deg) skewY(-10deg) rotateZ(0deg);
     transform: rotateX(45deg) skewY(-10deg) rotateZ(0deg) rotateX(-12deg);    
     gap: 100vh;    
-    // display: contents;    
 }
 
 .main-portfolio__projects-container--fade {
