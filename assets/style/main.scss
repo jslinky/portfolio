@@ -980,15 +980,7 @@ summary {
 }
 
 
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s ease;
-}
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
-}
+
 
 .c-cvIcon {
     position: fixed;
@@ -1255,16 +1247,5 @@ summary {
     // transition: clip-path 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.filterList-enter-active, .filterList-leave-active {
-    transition: all 0.3s ease;
-}
-  
-.filterList-enter, .filterList-leave-to {
-    opacity: 0;
-    transform: translateY(-30px);
-}
 
-.filterList-move {
-    transition: transform 0.5s;
-}
   

@@ -75,10 +75,15 @@ const { stop } = useIntersectionObserver(
     ([{ isIntersecting, target }], observerElement) => {
         if(isIntersecting) {
             projectGroupIndex.value = target.dataset.index 
+            console.log(projectGroupIndex.value)
         }
     targetIsVisible.value = isIntersecting
     // console.log(targetIsVisible.value, target.dataset.index)
     },
+    {
+        /// fix for iOS safari
+        threshold: 0.9,
+    }
 )
 
 definePageMeta({

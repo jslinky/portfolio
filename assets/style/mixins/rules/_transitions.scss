@@ -1,0 +1,94 @@
+
+///// List
+/// 
+.list-enter-active,
+.list-leave-active {
+    transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+///// Filter List
+
+.filterList-enter-active, .filterList-leave-active {
+    transition: all 0.3s ease;
+}
+    
+.filterList-enter, .filterList-leave-to {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.filterList-move {
+    transition: transform 0.5s;
+}    
+
+
+///// Rotate
+
+.rotate-enter-active,
+.rotate-leave-active {
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+  .main-portfolio__projects {
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+.rotate-enter-from,
+.rotate-leave-to {
+  opacity: 0;
+  .main-portfolio__projects {
+    // transform: rotate3d(1, 1, 1, 15deg);
+    transform: rotateZ(45deg) scale(1.2);
+    opacity:0;
+  }
+}
+
+///// Page Enter
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+  .main-portfolio__visual {
+    transition: all 0.4s ease-in;
+  }
+}
+
+.page-enter-from.next {
+    .main-portfolio__visual {
+      transform: translateY(100%) translateZ(1000px);
+    }
+  }
+  
+  .page-enter-to.next {
+    .main-portfolio__visual {
+      transform: translateY(0%);
+    }
+  }
+  
+  .page-leave-to.next {
+    .main-portfolio__visual {
+      transform: translateY(-300%) translateZ(-1000px);
+  
+    }
+  }
+  
+  .page-enter-from.prev {
+    .main-portfolio__visual {
+      transform: translateY(-300%) translateZ(-1000px);    
+    }
+  }
+  
+  .page-enter-to.prev {
+    .main-portfolio__visual {
+      transform: translateY(0%);
+    }
+  }
+  
+  .page-leave-to.prev {
+    .main-portfolio__visual {
+      transform: translateY(100%) translateZ(1000px);
+    }
+  }
