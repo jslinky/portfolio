@@ -4,8 +4,9 @@
             <!-- <header class="header"> -->
             <!-- <header class="header"> -->
             <div class="header__inner">
-                <nuxt-link to="/portfolio" title="Back to portfolio">
+                <nuxt-link to="/portfolio" title="Back to portfolio" class="c-logo-link">
                     <Logo />
+                    <div class="c-logo-name">Justin Small</div>
                 </nuxt-link> 
             </div>
         </header>
