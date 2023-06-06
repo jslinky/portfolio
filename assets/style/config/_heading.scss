@@ -5,7 +5,7 @@ $dfr-config: deep-map-merge(
     'heading': (
       "base": (
         'size': var(--baseTextSize),
-        'color': var(--c-body),
+        'color': var(--c-dark),
         'text-transform': uppercase,
         'font-family': inherit,
         'weight': 600,
@@ -64,7 +64,7 @@ $dfr-config: deep-map-merge(
         'line-height': 1,
       ),
       'm': (
-        'size': var(--text-m),
+        'size': 1rem,
         'color': var(--c-body),
         'weight': 600,
         'line-height': 1,

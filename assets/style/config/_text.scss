@@ -8,7 +8,7 @@ $dfr-config: deep-map-merge(
         "spaceIncrement": 1.8,
         "unit": 0.5rem,
         "lineHeightFixedAmount": 0.5rem,
-        "lineHeightRelativeAmount": 0.75em,
+        "lineHeightRelativeAmount": 1em,
         "globalLineHeight": calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount)),
         "textFrameRatio": 2.75,
         "textFrameY": 0.85em,

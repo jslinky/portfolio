@@ -78,7 +78,6 @@ export default {
             description: `
             <h3>Overview</h3>
             <p>We were tasked with designing and building a revamped website for Ribena - home of the original much loved blackcurrant soft drink. This coincided with their shift in branding to a cartoony, self-deprecating, playful new marketing campaign. This new site would include home, about and sustainability pages aswell as a rebuild e-commerce shop.</p>
-            <p>With it's 
             <details open>
             <summary>
             My Role

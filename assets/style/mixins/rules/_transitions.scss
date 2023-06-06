@@ -48,6 +48,8 @@
 
 ///// Page Enter
 
+@container portfolio (min-width: 550px) {
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;
@@ -91,4 +93,56 @@
     .main-portfolio__visual {
       transform: translateY(100%) translateZ(1000px);
     }
+  }
+
+}
+
+  @container portfolio (max-width: 550px) {
+
+    .page-enter-active,
+    .page-leave-active {
+      transition: all 0.4s;
+      .main-portfolio__visual img {
+        transition: all 0.4s ease-in;
+      }
+    }
+    
+    .page-enter-from.next {
+        .main-portfolio__visual img {
+          transform: translateY(100%) translateZ(1000px);
+        }
+      }
+      
+      .page-enter-to.next {
+        .main-portfolio__visual img {
+          transform: translateY(0%);
+        }
+      }
+      
+      .page-leave-to.next {
+        .main-portfolio__visual img {
+          transform: translateY(-300%) translateZ(-1000px);
+      
+        }
+      }
+      
+      .page-enter-from.prev {
+        .main-portfolio__visual img {
+          transform: translateY(-300%) translateZ(-1000px);    
+        }
+      }
+      
+      .page-enter-to.prev {
+        .main-portfolio__visual img {
+          transform: translateY(0%);
+        }
+      }
+      
+      .page-leave-to.prev {
+        .main-portfolio__visual img {
+          transform: translateY(100%) translateZ(1000px);
+        }
+      }    
+
+
   }
