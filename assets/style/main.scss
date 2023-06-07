@@ -227,7 +227,7 @@ summary {
     // &:has(iframe) {
     //     aspect-ratio: 1921 / 1120;
     // }
-    @media(any-pointer: coarse) {    
+    @media(any-pointer: fine) {    
         &:hover {
             transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1.1);
         }
