@@ -11,7 +11,7 @@
             </div>
         </header>
         <section ref="section">
-            <FilterMenu />
+            <FilterMenu v-if="!store.portfolioIndexLoading" />
             <NuxtPage />            
         </section>
     </main>
