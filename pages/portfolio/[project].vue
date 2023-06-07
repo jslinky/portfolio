@@ -12,9 +12,6 @@
                     :autoplay = "{
                         delay: 5000,
                     }"                        
-
-                    @progress="onProgress"
-                    @slidechange="onSlideChange"
                 >                
                     <swiper-slide v-for="(img, i) in images" :key="i">                        
                         <VideoPlayer :videoId="img.videoId" v-if="img.videoId" />                        
@@ -40,7 +37,8 @@
                         <Icon v-if="tag === 'css'" name="bi:filetype-css" color="black" />
                         <Icon v-if="tag === 'vue'" name="ph:file-vue" color="black" />
                         <Icon v-if="tag === 'pinia'" name="logos:pinia" color="black" /> 
-                        <Icon v-if="tag === 'animation'" name="clarity:animation-line" color="black" />                       
+                        <Icon v-if="tag === 'animation'" name="clarity:animation-line" color="black" /> 
+                        <Icon v-if="tag === 'javascript'" name="mdi:language-javascript" color="black" />                                               
                         {{ tag }}
                     </li>
                 </ul>            
