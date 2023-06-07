@@ -12,7 +12,7 @@ export default {
             </summary>
             <div>
             <p>With the company having had some experience in creating a number of these campaigns in the past, each offering was a bespoke project. This became a time-consuming process. We wanted to move away from this custom, somewhat ad hoc approach and produce a competition framework, in which a new instance could be spun up in moments, while at the same time being highly configurable from a config file. </p>
-            <p>I set up to identify and produce a report on what steps we could take to realize this vision. At the same time, I produced a <a href="cdpn.io/wvxRjRB/b1ffaf0ebef20339c779ab1672b12b20" title="competition prototype">prototype</a> of what this might look like from a front-end perspective.</p>
+            <p>I set up to identify and produce a report on what steps we could take to realize this vision. At the same time, I produced a <a href="https://cdpn.io/wvxRjRB/b1ffaf0ebef20339c779ab1672b12b20" title="competition prototype">prototype</a> of what this might look like from a front-end perspective.</p>
             <ul>
             <li>A new core page layout structure</li>
             <li>A new style-config JSON file allowing for layout and styling configuration</li>
