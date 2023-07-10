@@ -34,42 +34,57 @@
 
 
 <script setup>
+/// main pinia store
 import { useMainStore } from '~/store/index'
+/// intersection observer composable
 import { useIntersectionObserver } from '@vueuse/core'
 
+/// utilities composable 
 const ultil = useUtil()
+/// project data composable
 const projects = useProjectData()
+/// route composable
 const route = useRoute()
+/// store composable
 const store = useMainStore()
+
+/// split value for project array
 const chunkSize = 6;
+
+/// does browser support @container
 let supportsContainers = ref(false)
 
-// Intersection observer
+/// Intersection observer - on each of the project chunks
+/// template ref for each array item in chunkedArray
 const portfolioProjectGroup = ref();
+/// not used - remove?
 const targetIsVisible = ref(false)
+/// index of currently intersecting portfolioProjectGroup
 const projectGroupIndex = ref(0)
 
+/// project currently consists on root path and /portfolio. Test to see if on root or not.
+/// used to set value within pinia store
 const isProjectPath = computed(() => route.path.split('/').filter(part => part !== ""))
 
+// create a reactive state to store all projects - this is assigned onMounted
 const portfolio = ref([])
+
+/// filter portfolio based on value of store.filterBy
 const filterProjects = computed(() => store.filterBy !== 'all' ? portfolio.value.filter(proj => proj.tags.some((entry) => entry.includes(store.filterBy)) ) : portfolio.value)
 
-
+/// destructure useChunkArray function 
 const { useChunkArray } = ultil
-// const { chunkedArray } = useChunkArray(projects.portfolio, chunkSize);
+/// create comp prop for chunked portfolio 
 const chunkedArray = computed(() => useChunkArray(filterProjects.value, chunkSize).chunkedArray)
-
+/// length of chunkedArray
 const chunkedArrayLength = computed(() => chunkedArray.value.length)
 
+/// create a array of numbers based on chunkedArrayLength for use by dot indicators 
 const markerRange = computed(() => {
     return Array.from({ length: chunkedArrayLength.value }, (value, index) => index)
 })
 
-
-watch(filterProjects, (oldX, newX) => {
-//   console.log(`filterProjects old is ${oldX}. filterProjects new is ${newX.length}`)
-})
-
+/// create intersection observer to watch what chunked section is intersecting to update marker
 const { stop } = useIntersectionObserver(
     portfolioProjectGroup,
     ([{ isIntersecting, target }], observerElement) => {
@@ -86,6 +101,7 @@ const { stop } = useIntersectionObserver(
     }
 )
 
+/// set page transition name
 definePageMeta({
   pageTransition: {
     name: 'rotate'
@@ -93,10 +109,14 @@ definePageMeta({
 })
 
 onMounted(() => {    
+    /// assign project portfolio data to portfolio state
     portfolio.value = projects.portfolio
     if (process.client) {
+        // set project path - are we in portfolio
         store.projectPath = isProjectPath.value
+        /// does client support container queries 
         supportsContainers.value = window.CSS ? window.CSS.supports('font-size', '1cqw') : false
+        /// fake a loading screen
         window.setTimeout(() => {
             store.portfolioIndexLoading = false
         }, 1000)

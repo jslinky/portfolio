@@ -38,17 +38,24 @@
 
 import { useMainStore } from '~/store/index'
 const store = useMainStore()
-// const isFilterOpen = ref(false)
 
+/// template ref for .main-portfolio__filter
 const filter = ref(null);
+/// template ref for .main-portfolio__filterRadioGroup > div
 const radioGroupDivs = ref([]);
+/// template ref for .main-portfolio__filterPanel
 const filterButton = ref(null);
+/// template ref for .main-portfolio__filterClose
 const filterClose = ref(null);
+/// template ref for .main-portfolio__filterBackdrop
 const filterBackdrop = ref(null);
 
+/// array of filter options for radio inputs. selected option is returned as 1st in the array (UI / design requirement)
 const filterOptionLabels = computed(() => store.sortArrayWithVariableFirst([...store.filterOptions], store.filterBy));
+/// comp prop of array of unselected options
 const unSelectedOptions = computed(() => radioGroupDivs.value.filter(entry => entry.dataset.option !== store.filterBy))
 
+/// Close menu if selected option is clicked
 function radioMenuToggle(option) {
   if(option === store.filterBy) {
     menuToggle()
@@ -57,18 +64,12 @@ function radioMenuToggle(option) {
   }
 }
 
+/// Open / close menu
 function menuToggle() {
   store.isFilterOpen ? menuAnimateClose() : menuAnimateOpen()
 }
 
-const filterAnimationKeyframesOpen = [{ transform: 'translateY(50%)' }, { transform: 'translateY(0)' }];
-const filterAnimationKeyframesClose = filterAnimationKeyframesOpen.reverse();
-const unSelectedOptionsKeyframesOpen = [ { opacity: '0', transform: 'scale(0.75)' }, { opacity: '1', transform: 'scale(1)' } ]
-const unSelectedOptionsKeyframesClose = unSelectedOptionsKeyframesOpen.reverse();
-const filterBackdropAnimationKeyframesOpen = [ { clipPath: 'circle(0% at 100% 100%)'  }, { clipPath: 'circle(min(30rem, 100vw) at 100% 100%)' }]    
-const filterBackdropAnimationKeyframesClose = filterBackdropAnimationKeyframesOpen.reverse() 
-
-
+/// change event for radio input - set loading and close menu
 function changeFilter() {
     store.portfolioIndexLoading = true
     window.setTimeout(() => {
