@@ -2,6 +2,30 @@ export default {
     title: 'Justin Small Portfolio',
     portfolio: [
         {
+            title: "Easybook Training",
+            slug: "easybook",
+            description: `<h3>Overview</h3>
+            <p>Easybook training is website which works with hundreds of accredited UK training providers / centres to provide details and booking capabilities to thousands of of construction, first aid, fire safety and health and safety training courses, all over the UK.</p>
+            <details open>
+            <summary>
+            Role
+            </summary>
+            <div>
+            <p>This project involved a complete redesign and development of their website. The new codebase would use Laravel and inertia on the back-end. While on the front-end I used Vue, Typescript, Tailwind and Daisy UI. Translating designs from Figma, the site consisted With over 20 unique customer-facing pages and a admin section, this was a large project which spaned an initial 8 month development period.</p>
+            <p>From a personal perpective it really allowed me to further develop my skills with Vue and Typescript.</p>
+            </div>
+            </details>
+            `,
+            images: [
+              { url: "/img/easybook-one.png", alt: "EB image 1" },
+              { url: "/img/easybook-two.png", alt: "EB image 2" },
+              { url: "/img/easybook-three.png", alt: "EB image 3" },
+              { url: "/img/easybook-four.png", alt: "EB image 4" }
+            ],
+            url: ['http://easybook.webscript.co.uk'],
+            tags: ['vue', 'typescript', 'UI', 'inertia', 'html', 'css']
+        },        
+        {
             title: "Competition framework",
             slug: "competition-framework",
             description: `<h3>Overview</h3>
