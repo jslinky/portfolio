@@ -1,6 +1,6 @@
 <template>
 <div class="c-cvIcon">
-<a href="/JustinSmall-CV-2023-compressed.pdf" title="Download my CV">     
+<a href="/JustinCV-2024.pdf" title="Download my CV">     
 <svg width="416" height="416" viewBox="0 0 416 416" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M208 416C322.875 416 416 322.875 416 208C416 93.1248 322.875 0 208 0C93.1248 0 0 93.1248 0 208C0 322.875 93.1248 416 208 416ZM208 405C316.8 405 405 316.8 405 208C405 99.1999 316.8 11 208 11C99.1999 11 11 99.1999 11 208C11 316.8 99.1999 405 208 405Z" fill="#2E2219"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M208 397C312.382 397 397 312.382 397 208C397 103.618 312.382 19 208 19C103.618 19 19 103.618 19 208C19 312.382 103.618 397 208 397ZM208 389C307.964 389 389 307.964 389 208C389 108.036 307.964 27 208 27C108.036 27 27 108.036 27 208C27 307.964 108.036 389 208 389Z" fill="#2E2219"/>
