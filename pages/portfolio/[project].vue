@@ -35,18 +35,22 @@
                         <Icon v-if="tag === 'design'" name="ci:figma" color="black" />   
                         <Icon v-if="tag === 'scss'" name="bi:filetype-scss" color="black" />
                         <Icon v-if="tag === 'css'" name="bi:filetype-css" color="black" />
-                        <Icon v-if="tag === 'vue'" name="ph:file-vue" color="black" />
+                        <Icon v-if="tag === 'vue'" name="simple-icons:vuedotjs" color="black" />
                         <Icon v-if="tag === 'pinia'" name="logos:pinia" color="black" /> 
+                        <Icon v-if="tag === 'nuxt'" name="simple-icons:nuxtdotjs" color="black" />
+                        <Icon v-if="tag === 'tailwind'" name="simple-icons:tailwindcss" color="black" />
                         <Icon v-if="tag === 'animation'" name="clarity:animation-line" color="black" /> 
-                        <Icon v-if="tag === 'javascript'" name="mdi:language-javascript" color="black" />                                               
+                        <Icon v-if="tag === 'javascript'" name="mdi:language-javascript" color="black" />
+                        <Icon v-if="tag === 'inertia'" name="simple-icons:inertia" color="black" />                                               
                         {{ tag }}
                     </li>
-                </ul>            
-                <div v-if="description" v-html="description" class="main-portfolio__desc flow"></div>
+                </ul>    
                 <div v-if="url" class="main-portfolio__url">
                 <h3>URLs</h3>
                 <a :href="link" rel="external" v-for="(link, i) in url" :key="i">{{ link }}</a>
-                </div>
+                </div>                        
+                <div v-if="description" v-html="description" class="main-portfolio__desc flow"></div>
+
             </div>
         </div>
 
