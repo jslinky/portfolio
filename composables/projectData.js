@@ -2,6 +2,58 @@ export default {
   title: "Justin Small Portfolio",
   portfolio: [
     {
+      title: "Rarible",
+      slug: "rarible",
+      description: `
+            <h3>Overview</h3>
+<p>This project was an interview task to design and build a cryptocurrency dashboard listing page. The dashboard includes dynamic features such as column-based filtering, coin-type selection, and adjustable trading periods, providing an intuitive interface for users to track and manage their crypto assets.</p>
+
+<details open>
+<summary>My Role</summary>
+<div>
+<p>I took the provided brief and translated it into a polished UI design using Figma, clearly organizing data to facilitate ease of use and readability. Following approval of the design, I developed the dashboard using Nuxt.js and Tailwind CSS, implementing interactive features including a robust search functionality, favoriting options, and responsive filter controls. Additionally, the application supports both light and dark modes, enhancing usability across different environments and user preferences.</p>
+</div>
+</details>
+            `,
+      images: [
+        { url: "/img/rarible.webp", alt: "Rarible screens" },
+        ],
+      tags: [
+        "design",
+        "nuxt",
+        "html",
+        "css",
+        "tailwind",
+        "typescript",
+      ],
+      url: ["https://gregarious-belekoy-e149d1.netlify.app/"],
+    },
+    {
+      title: "Small Web",
+      slug: "small-web",
+      description: `
+            <h3>Overview</h3>
+<p>A personal project for my freelance web agency, Small Web. This (work in progress) website showcases my design and development capabilities while clearly communicating the services offered to prospective clients.</p>
+
+<details open>
+<summary>My Role</summary>
+<div>
+<p>I was responsible for every aspect of this project's design and development. Using Figma, I designed a modern, engaging, and user-friendly layout that accurately reflects my freelance agency’s brand identity. I then built the website using Tailwind CSS for streamlined styling and Alpine.js for lightweight JavaScript interactivity. GSAP was integrated to enhance the site's visual experience with smooth, engaging animations, creating a professional, dynamic online presence for my agency.</p>
+</div>
+</details>
+            `,
+      images: [
+        { url: "/img/small-wip.webp", alt: "Small Web" },
+        ],
+      tags: [
+        "design",
+        "html",
+        "css",
+        "tailwind",
+        "alpinejs",
+      ],
+    },    
+    {
       title: "Fortitude Fitness International",
       slug: "fortitude-fitness",
       description: `
